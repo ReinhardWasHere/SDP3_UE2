@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="32a88614-bacd-4fa9-8b13-96e8a8212d2e" name="AdressManagment" linkedPackageId="72a01860-47f5-4f0f-9030-85dc71e4dcbf" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="2ac0e2bf-2796-40f8-9675-69c1ae1e577d">
+      <profileInstance Id="a2e04fde-cd67-4d19-96b1-506918b98c2b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="07a930ec-d583-4a1f-8875-25e39b0e3c81">
+      <profileInstance Id="100369cb-24cc-48cb-b1eb-8aa7639b9fb5" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e290a2ca-9c5f-4721-a3e7-76cce16801e4" name="Object" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0c2fc4f3-a7d0-4be3-9820-cf384db5194f" />
+        <ownedOperationsInternal>
+          <operation Id="060b4522-7b2f-48a6-a433-067618a04950" name="~Object" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="54dc5fa5-e482-42d6-94f6-9742f836dffe" />
+          </operation>
+          <operation Id="1c45b0e6-682b-4b89-9403-0f402b63e6c5" name="Object" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="997d9f38-2045-469e-9639-ec5fc4667a60" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5983e8ac-6b78-427c-a0ea-fdcd623d1486" name="AdressManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d2e0f36f-8736-4e5b-aa53-8123caf91499" />
+        <suppliersInternal>
+          <interfaceRealization Id="d21078a0-fe60-4a23-98d2-c650d125a9c5">
+            <interfaceMoniker Id="e9132a25-4a7c-4587-891e-3a3c2f7de394" LastKnownName="IAdressManagerReader" />
+            <elementDefinition Id="7ceec6ea-098c-4bc6-b049-fcb22400d1b8" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="a1546172-2baa-4595-91d3-8624d6076b80" isSubstitutable="false">
+            <classMoniker Id="e290a2ca-9c5f-4721-a3e7-76cce16801e4" LastKnownName="Object" />
+            <elementDefinition Id="17d44110-276c-4e9d-83fa-e54af9af59fe" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="3d6cc12a-48ac-4d74-ac1f-523b2307fea6" name="mAdresses" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f7d0219c-b313-45ff-b84a-896d41078a53" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e61dbf73-da83-4d8f-b086-7653055d28f0" LastKnownName="list&lt;Adress*&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="04d92b65-a274-4ca0-8200-e22d478ad11c" name="mPersons" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="84223a11-25b0-44c9-b3bd-dfe058612673" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="dbc711df-f05f-4faf-919c-5fe4b0dc8abe" LastKnownName="list&lt;TPerson*&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="e30c0150-5da4-413d-871f-64bdf28c0622" name="ReadFile" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b975ec97-ca96-413d-9436-7e394c2dfbf1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d414864c-0133-4b2e-91b4-fe0cb32c8a7f" direction="Return" isUnique="false">
+                  <elementDefinition Id="4eb63a6b-8f9c-468c-b318-e76cd032c942" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="766ecfcd-94fb-4b4e-9aad-6a6aa377c620" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="56d39e93-9d89-4256-9c4a-dc3d57b6c1bb" name="string" direction="In" isUnique="false">
+                  <elementDefinition Id="f3f6932d-adbc-4f37-adee-fa32106ff41e" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="41af7bfb-c715-45eb-a4f7-f7da92be3f3e" name="Reader*" direction="In" isUnique="false">
+                  <elementDefinition Id="52746491-803e-4e4e-8cbc-987d06e81f13" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="122a4fab-089a-4d2a-93ea-ea68a873c901" name="WriteAdresses" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="500d5090-b2f5-4da5-843d-66fb9f50d004" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="18e683fc-a802-42fb-a4e3-ba03b1cab9b1" name="string" direction="In" isUnique="false">
+                  <elementDefinition Id="a425f094-b50c-4fcf-9ed8-aa83ce4f05ad" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5c8399b0-2b5c-45a4-bb98-3c55f3e7adb1" name="Writer*" direction="In" isUnique="false">
+                  <elementDefinition Id="4b56ccea-f1fc-4e4a-a55c-a5a6db0c48cd" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fd301116-20dd-4e47-a002-53cb9d4da8b4" direction="Return" isUnique="false">
+                  <elementDefinition Id="868a5d1a-5c6d-4e84-ab9a-1d7dd7503165" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="766ecfcd-94fb-4b4e-9aad-6a6aa377c620" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e46201c2-b19b-4118-8f96-d39ab970e60d" name="LinkAdresses" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d5cc6e9a-1315-49f2-9fa9-55a32bb8ade0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fdf93a97-e13c-4b62-a1e9-c5c9840da447" direction="Return" isUnique="false">
+                  <elementDefinition Id="a1fcc59f-dd47-49ad-8a2c-1297bcb01d6f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="766ecfcd-94fb-4b4e-9aad-6a6aa377c620" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="5c49f968-ee54-46db-be32-3b00bf67992d" name="AddAdress" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d55a3290-4279-4abe-8c84-5587c832e862" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b203e657-1796-44a5-8548-43428e9701dc" direction="Return" isUnique="false">
+                  <elementDefinition Id="402340ad-d016-483f-a0d9-c1d7ae4b110e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="766ecfcd-94fb-4b4e-9aad-6a6aa377c620" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6b60fbeb-7826-4968-9ce9-fd0e312fc4c4" name="Adress*" direction="In" isUnique="false">
+                  <elementDefinition Id="566c8560-7b1b-48a6-9728-19160730c57b" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="5106f8a8-f7e8-4308-897a-c06fc9ab3126" name="AddPerson" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c5426be1-a9a6-4587-8397-6c01a7d7a98f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2db4f659-0583-4a82-9665-7fe99213547c" direction="Return" isUnique="false">
+                  <elementDefinition Id="08b2efdc-3fef-44bf-9dcf-10c0b3cc7d6e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="766ecfcd-94fb-4b4e-9aad-6a6aa377c620" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="af8496a0-5c58-4304-bc3c-51b3df6ed6c3" name="Person*" direction="In" isUnique="false">
+                  <elementDefinition Id="939f0fd9-dba0-4d5d-8175-65a0835e919d" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="caa85ff7-bb33-402b-ae3e-9dc6b7b465e8" name="AsciiWriter" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fbd54097-6138-4f11-bb84-a7f35e7c7e93" />
+        <generalsInternal>
+          <generalization Id="f7350f15-e078-4811-8112-e333cba456e1" isSubstitutable="false">
+            <classMoniker Id="7ef31f90-b9d6-48ce-9757-5742e0449090" LastKnownName="Writer" />
+            <elementDefinition Id="fcfd9466-aded-4e77-aad8-73116f7d57c9" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="d8b8b5de-c274-4c5f-b6eb-6c4bad851664" name="Write" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1395b50c-691f-4de9-b78a-288896f39d17" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3ffba18d-c9a8-4e35-89f5-d195a74ff8d9" direction="Return" isUnique="false">
+                  <elementDefinition Id="691dd776-1041-4419-9413-b06bc0895013" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5732d43c-1216-4eeb-9c89-f6233e9d48f9" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="08fae244-80ca-428f-aec8-635e4e1ad12c" name="string const&amp;" direction="In" isUnique="false">
+                  <elementDefinition Id="68abff59-a2cb-4893-a6a4-98f0486c5ac0" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f3165387-3084-47a3-b9a6-a8b73c77a713" name="list&lt;Adress*&gt; const&amp;" direction="In" isUnique="false">
+                  <elementDefinition Id="34595ff1-ceb4-4898-836f-3cef57c62470" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="53ec7ca8-2d7c-437c-b36a-67b19e045780" name="HtmlWriter" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8444fa6a-cec4-4f87-a4f0-4305b47b4056" />
+        <generalsInternal>
+          <generalization Id="8697aec9-0831-48c8-8648-25bfe552ff36" isSubstitutable="false">
+            <classMoniker Id="7ef31f90-b9d6-48ce-9757-5742e0449090" LastKnownName="Writer" />
+            <elementDefinition Id="49a9c152-e4f9-4b89-b4da-55d482df8eac" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="e870b8ae-1d40-48d6-ad96-7eccee124ed4" name="Write" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="19ded735-1a90-4d53-8900-0a25e0988472" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8cf5e215-e555-4582-b2a4-42ffbc3b529e" direction="Return" isUnique="false">
+                  <elementDefinition Id="ad49fd7f-6935-4715-858f-443f6ba4af19" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="175cd9d3-3cbd-4831-be53-33db5aa02172" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c71ea2ff-c83b-49b4-bdab-8a79a3fc46d3" name="string const&amp;" direction="In" isUnique="false">
+                  <elementDefinition Id="6aa030e8-e555-402c-bfe8-b9bdc13564c4" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="08903ae0-2422-4d98-bb82-5d76b35a0b2c" name="list&lt;Adress*&gt; const&amp;" direction="In" isUnique="false">
+                  <elementDefinition Id="e742aa95-a7f0-44e8-a230-0833182a0930" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="db91bda5-6763-4eaf-8519-0420429b148b" name="AdressReader" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e4b2245a-0161-4db4-b661-5607276747a0" />
+        <generalsInternal>
+          <generalization Id="8e787c0c-a984-4d60-83b4-c65c05f5093c" isSubstitutable="false">
+            <classMoniker Id="327c1ed9-d8cd-4d10-97f6-512358138cfe" LastKnownName="Reader" />
+            <elementDefinition Id="69e5a2c9-2f36-47be-a08e-c9a01bddf3d9" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="7f315fbf-432f-4627-b9e8-c65b89928751" name="Read" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fc23253a-8abd-42ae-9c8b-10d6d42369dc" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3eed3bb7-e2de-4d7e-9424-9be63dcad3c6" direction="Return" isUnique="false">
+                  <elementDefinition Id="3baae2ba-be11-4fb3-8bde-b7b461eac1ad" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6adec30-3ade-4773-a13d-685805f6c4aa" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cb9f92b7-67a9-4854-95c9-3b8db10408b7" name="string const&amp;" direction="In" isUnique="false">
+                  <elementDefinition Id="19caa398-c08d-48dc-8373-ca256c20cc1f" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="99ac1c0f-4709-4358-8e47-20c81035c1f9" name="IAdressManagerReader*" direction="In" isUnique="false">
+                  <elementDefinition Id="3cd34e7a-bd2b-4616-a027-74c1315ce11b" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f36e2f1c-aa90-4d5f-b096-700fc12b6c2f" name="PersonReader" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="182c6b90-c352-4280-a5a2-812cfb791503" />
+        <generalsInternal>
+          <generalization Id="a8fbd29f-7266-497c-a065-1188dad1c536" isSubstitutable="false">
+            <classMoniker Id="327c1ed9-d8cd-4d10-97f6-512358138cfe" LastKnownName="Reader" />
+            <elementDefinition Id="11c300d1-c31b-42f2-aebb-8670b79a3f6f" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="6e196f42-9c93-4e36-8beb-8f11a606afdd" name="Read" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="26a437a1-7e2f-4564-8585-b6a83c396ea1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ea581d97-eb02-4951-8cea-c318208582ae" direction="Return" isUnique="false">
+                  <elementDefinition Id="5599b7c6-c928-4cbf-830b-fb123c8f1b6c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="29099a4f-1caa-4d47-9753-f601cd680b8f" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5a255fbd-ca77-42c2-955b-911e7010ad9e" name="string const&amp;" direction="In" isUnique="false">
+                  <elementDefinition Id="bf1ada15-cbe9-424c-9f33-a49bb188e254" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="233988a7-9e37-4ba1-b759-2efd7b0e9812" name="IAdressManagerReader*" direction="In" isUnique="false">
+                  <elementDefinition Id="89cd7409-034d-42a3-b08e-17eebbb212db" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="766ecfcd-94fb-4b4e-9aad-6a6aa377c620" name="void" isAbstract="false" isLeaf="false" cachedFullName="void">
+        <elementDefinition Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7ef31f90-b9d6-48ce-9757-5742e0449090" name="Writer" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ac69cddd-7478-407d-b13d-b5e91e7fde09" />
+        <generalsInternal>
+          <generalization Id="5a971f0c-fbd0-43cd-8bc1-3ccd4e20f3e2" isSubstitutable="false">
+            <classMoniker Id="e290a2ca-9c5f-4721-a3e7-76cce16801e4" LastKnownName="Object" />
+            <elementDefinition Id="4a28cf7b-f15c-428d-b0dc-66ad5e675e05" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="e6d112fe-ed56-477a-a85b-83690bb51e0b" name="Write" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2d677ab1-baea-4361-8c76-7fec51f16dad" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0e1cb492-461e-4926-993f-ec8ab4efb5e5" direction="Return" isUnique="false">
+                  <elementDefinition Id="263c4a4c-2ce2-4170-ae61-98850adcb714" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="766ecfcd-94fb-4b4e-9aad-6a6aa377c620" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6fb20b17-89c1-4b73-b53b-2c136a43cb6d" name="string const&amp;" direction="In" isUnique="false">
+                  <elementDefinition Id="ef842919-1128-49a9-81e1-39bf50b216ae" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e5803b48-c72c-4cfc-ad5b-ccb3cedeb727" name="list&lt;Adress*&gt; const&amp;" direction="In" isUnique="false">
+                  <elementDefinition Id="db0d2951-218d-4d25-8052-3cb3b9b53810" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="327c1ed9-d8cd-4d10-97f6-512358138cfe" name="Reader" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a829f9a1-d796-47dd-98e6-b6f2048933d4" />
+        <generalsInternal>
+          <generalization Id="84917352-33b8-4a84-935c-c7f75c8f47a6" isSubstitutable="false">
+            <classMoniker Id="e290a2ca-9c5f-4721-a3e7-76cce16801e4" LastKnownName="Object" />
+            <elementDefinition Id="80516bc6-a179-4226-8e3a-6eee3bdf7dce" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="52ffac0d-8d33-484a-8565-5ad1d48cebe1" name="Read" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e511ce43-f8fa-43ec-87ac-c5e4f65d8043" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3cac8f27-49d9-487b-ab50-69a9e1d21075" direction="Return" isUnique="false">
+                  <elementDefinition Id="bb3be6c1-7a83-4995-bebb-8f21656fcd1b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ca445f2-40fb-4ce9-83da-7df4102a9aad" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9e3e0b70-48b5-4c3d-8227-4a75179cba3b" name="string const&amp;" direction="In" isUnique="false">
+                  <elementDefinition Id="35f50985-dbf1-4e30-94ae-0907be2610a0" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="eb1dc002-9d4c-4aee-880c-ba70bf0043d6" name="IAdressManagerReader*" direction="In" isUnique="false">
+                  <elementDefinition Id="4a3e2f0e-aa1b-4e07-987b-2e6f1583c728" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="e61dbf73-da83-4d8f-b086-7653055d28f0" name="list&lt;Adress*&gt;" isAbstract="false" isLeaf="false" cachedFullName="list&lt;Adress*&gt;">
+        <elementDefinition Id="04444335-52c4-497c-bc8e-f30b627c2e77" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="dbc711df-f05f-4faf-919c-5fe4b0dc8abe" name="list&lt;TPerson*&gt;" isAbstract="false" isLeaf="false" cachedFullName="list&lt;TPerson*&gt;">
+        <elementDefinition Id="b58e903e-fb21-47f2-ac66-3b29a658876b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="21391109-3037-4520-a0ab-9ca8647abba0" name="Adress" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7581ecc0-5fa6-4e00-a346-f0f75d779729" />
+        <generalsInternal>
+          <generalization Id="c151a951-3270-4341-81f6-0f84313a248c" isSubstitutable="false">
+            <classMoniker Id="e290a2ca-9c5f-4721-a3e7-76cce16801e4" LastKnownName="Object" />
+            <elementDefinition Id="d3b009a7-546d-4c32-9c41-bbdecf2d4fb7" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="db011bf5-3f5b-4d34-a3c9-0900feed1357" name="mStreet" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8e7d6117-ee25-4f52-bccc-aba004da4784" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="5f4ee274-541b-43a8-b9e0-79380da559e6" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="1d202f6e-dcc1-41b7-802d-bd3b20c64aea" name="mZipCode" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="accba76d-586b-451a-9e3b-87d45c9578a2" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e173f672-1418-422f-990d-22c862ab2104" LastKnownName="size_t" />
+            </type_NamedElement>
+          </property>
+          <property Id="6910c729-df43-4f77-b95e-59e167a1abd7" name="mCity" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="46154e46-df0a-4973-a49a-04bda4f6f3e1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="5f4ee274-541b-43a8-b9e0-79380da559e6" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="00766433-8118-47a3-8c37-aa2fa6867ebc" name="mHouseNumber" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1a51798e-db34-4075-88c3-777c408eb9c4" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7b69266d-edd3-4d3f-ac02-5bf1b088cf3f" LastKnownName="size_t" />
+            </type_NamedElement>
+          </property>
+          <property Id="c82da0c8-2e08-432e-a2dc-f83a0316beb9" name="mPersons" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="887d55b7-ecc9-498d-bb4a-4ed1b4119cf6" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b1755181-ae03-4504-8ea9-12d7cb163594" LastKnownName="list&lt;Person*&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="05a572d3-02af-4f2c-854f-b92a6b8447d7" name="Person" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="80abba64-7c0a-40c8-ba32-c29509231c2b" />
+        <generalsInternal>
+          <generalization Id="f7ce2251-8cfe-4a32-8dc6-0bc91fd11034" isSubstitutable="false">
+            <classMoniker Id="e290a2ca-9c5f-4721-a3e7-76cce16801e4" LastKnownName="Object" />
+            <elementDefinition Id="c185ecc3-f922-4c3d-8257-9122f213a744" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="82f7a852-b236-42ac-aca3-6eaf73e34412" name="mFirstName" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="33fe12d0-dc46-4baf-a93a-6c191c95b78e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="5f4ee274-541b-43a8-b9e0-79380da559e6" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="8cbe8a18-e871-4716-b488-e4f08a66e070" name="mLastName" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cecfe878-0384-4fd5-b496-2563549aa8ca" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ce908846-93c4-4019-aefb-bc776f80fa4c" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="fdff6548-8e57-4200-b24f-640c86853bca" name="mIndex" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="64c8f155-232c-4134-befd-f3dfae3fcb25" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7b69266d-edd3-4d3f-ac02-5bf1b088cf3f" LastKnownName="size_t" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="e9132a25-4a7c-4587-891e-3a3c2f7de394" name="IAdressManagerReader" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bd664b14-cbb1-414c-bc82-d756642f1ccd" />
+        <ownedOperations>
+          <operation Id="bf629ed0-7261-45b5-aacc-3982e36f8d66" name="AddAdress" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="89ca5987-c2f7-4b5d-89de-112a88eb2838" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b9f6c920-274e-4c3a-af48-28b58198495b" direction="Return" isUnique="false">
+                  <elementDefinition Id="e77ceb2c-ad74-4e6d-93e0-ff2ef256036f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="766ecfcd-94fb-4b4e-9aad-6a6aa377c620" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7e368541-df52-4a74-a40c-cb114e05e6e2" name="Adress*" direction="In" isUnique="false">
+                  <elementDefinition Id="7c882e62-e544-4923-8662-ab701a937053" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="730b774b-2ff0-4194-84e5-3187f37103f0" name="AddPerson" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4bc335a8-4915-4cfc-99a9-26f58fd99d7c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a9991bd0-7264-40c1-86d0-81bad3009bde" direction="Return" isUnique="false">
+                  <elementDefinition Id="78a6a90d-2d68-4924-b8ca-a4cdf9b2e6d7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="766ecfcd-94fb-4b4e-9aad-6a6aa377c620" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5a7ad154-fcf2-42b3-bb45-bea48d645061" name="Person*" direction="In" isUnique="false">
+                  <elementDefinition Id="2be33d8c-2932-4bb3-b1db-62e54bd734bd" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="5f4ee274-541b-43a8-b9e0-79380da559e6" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="17d8fa6a-81e1-40f5-a967-54a67efee09b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ce908846-93c4-4019-aefb-bc776f80fa4c" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="17d8fa6a-81e1-40f5-a967-54a67efee09b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7b69266d-edd3-4d3f-ac02-5bf1b088cf3f" name="size_t" isAbstract="false" isLeaf="false" cachedFullName="size_t">
+        <elementDefinition Id="002836df-a935-45ff-bdf4-63011b2c21c8" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e173f672-1418-422f-990d-22c862ab2104" name="size_t" isAbstract="false" isLeaf="false" cachedFullName="size_t">
+        <elementDefinition Id="002836df-a935-45ff-bdf4-63011b2c21c8" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b1755181-ae03-4504-8ea9-12d7cb163594" name="list&lt;Person*&gt;" isAbstract="false" isLeaf="false" cachedFullName="list&lt;Person*&gt;">
+        <elementDefinition Id="da23453f-0bfa-4232-ad35-33f8574caf5e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="175cd9d3-3cbd-4831-be53-33db5aa02172" name="void" isAbstract="false" isLeaf="false" cachedFullName="void">
+        <elementDefinition Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5732d43c-1216-4eeb-9c89-f6233e9d48f9" name="void" isAbstract="false" isLeaf="false" cachedFullName="void">
+        <elementDefinition Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5ca445f2-40fb-4ce9-83da-7df4102a9aad" name="void" isAbstract="false" isLeaf="false" cachedFullName="void">
+        <elementDefinition Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f6adec30-3ade-4773-a13d-685805f6c4aa" name="void" isAbstract="false" isLeaf="false" cachedFullName="void">
+        <elementDefinition Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="29099a4f-1caa-4d47-9753-f601cd680b8f" name="void" isAbstract="false" isLeaf="false" cachedFullName="void">
+        <elementDefinition Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="72a01860-47f5-4f0f-9030-85dc71e4dcbf" name="AdressManagment">
+    <elementDefinition Id="a464c6b5-3f06-47c5-a41d-50594c7dea79" />
+  </package>
+</logicalClassDesignerModel>

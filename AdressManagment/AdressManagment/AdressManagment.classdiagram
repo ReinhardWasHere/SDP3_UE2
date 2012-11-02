@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="32a88614-bacd-4fa9-8b13-96e8a8212d2e" name="AdressManagment" linkedPackageId="72a01860-47f5-4f0f-9030-85dc71e4dcbf" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="2ac0e2bf-2796-40f8-9675-69c1ae1e577d">
-      <profileInstance Id="a2e04fde-cd67-4d19-96b1-506918b98c2b" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="07a930ec-d583-4a1f-8875-25e39b0e3c81">
-      <profileInstance Id="100369cb-24cc-48cb-b1eb-8aa7639b9fb5" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="32a88614-bacd-4fa9-8b13-96e8a8212d2e" name="AdressManagment" linkedPackageId="72a01860-47f5-4f0f-9030-85dc71e4dcbf" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="e290a2ca-9c5f-4721-a3e7-76cce16801e4" name="Object" isAbstract="true" isLeaf="false" isActiveClass="false">
@@ -43,6 +29,60 @@
             <elementDefinition Id="17d44110-276c-4e9d-83fa-e54af9af59fe" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association Id="b5deaaa8-dc70-41df-9d3f-d27f2881cfc5" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="21391109-3037-4520-a0ab-9ca8647abba0" LastKnownName="Adress" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6279d249-a09d-415d-bf43-28467d4c0889" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8b4b2912-7053-441a-a513-ecb84a123875" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="edfab74c-b681-4fb6-aac5-8f18593791b8" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="2490c99c-1864-451f-8276-fa40e05a4e8a" name="Lower" value="*">
+                      <elementDefinition Id="a7e568de-ec72-46c0-acfd-ac3d40c3acd3" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="19ed72e5-144d-4ada-82b4-bd845a8e373b" name="Upper" value="*">
+                      <elementDefinition Id="52114f9f-58f9-4c8f-bce4-9c1fcddb30f6" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="122e482c-702e-4a82-bb3e-466955198fca" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="55c220d0-b5cd-43d4-8494-71cb63ab19f1" />
+          </association>
+          <association Id="fe7aee41-fef5-4293-9dae-68ccbcae58e6" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="05a572d3-02af-4f2c-854f-b92a6b8447d7" LastKnownName="Person" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4639d01e-2501-41a9-8a82-b4ef70080a30" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c91dd6be-abab-4340-84af-c4c319fcb485" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ed31d2a5-0ca6-460c-8d28-a14604166245" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="aaabc721-2585-4be2-a68c-3fd0e6d494eb" name="Lower" value="*">
+                      <elementDefinition Id="952c21ac-f618-493f-9f23-70e47598048f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="71d0a7d2-28ac-4be5-a4b0-71b02b7305c7" name="Upper" value="*">
+                      <elementDefinition Id="0a3c9ac4-3c90-4eb8-95ca-08fca5b1379c" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="f868930f-fe66-4020-9688-74e5490a7ed9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="230613d3-c3de-452e-8cfc-607e59f5b7bb" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="3d6cc12a-48ac-4d74-ac1f-523b2307fea6" name="mAdresses" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="f7d0219c-b313-45ff-b84a-896d41078a53" />
@@ -53,7 +93,7 @@
           <property Id="04d92b65-a274-4ca0-8200-e22d478ad11c" name="mPersons" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="84223a11-25b0-44c9-b3bd-dfe058612673" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="dbc711df-f05f-4faf-919c-5fe4b0dc8abe" LastKnownName="list&lt;TPerson*&gt;" />
+              <referencedTypeMoniker Id="a49278bd-fd9f-4d60-b97c-82fce6e9b6cd" LastKnownName="list&lt;Person*&gt;" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -157,7 +197,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="caa85ff7-bb33-402b-ae3e-9dc6b7b465e8" name="AsciiWriter" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="caa85ff7-bb33-402b-ae3e-9dc6b7b465e8" name="AsciiWriter" isAbstract="true" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="fbd54097-6138-4f11-bb84-a7f35e7c7e93" />
         <generalsInternal>
           <generalization Id="f7350f15-e078-4811-8112-e333cba456e1" isSubstitutable="false">
@@ -193,7 +233,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="53ec7ca8-2d7c-437c-b36a-67b19e045780" name="HtmlWriter" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="53ec7ca8-2d7c-437c-b36a-67b19e045780" name="HtmlWriter" isAbstract="true" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="8444fa6a-cec4-4f87-a4f0-4305b47b4056" />
         <generalsInternal>
           <generalization Id="8697aec9-0831-48c8-8648-25bfe552ff36" isSubstitutable="false">
@@ -229,7 +269,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="db91bda5-6763-4eaf-8519-0420429b148b" name="AdressReader" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="db91bda5-6763-4eaf-8519-0420429b148b" name="AdressReader" isAbstract="true" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="e4b2245a-0161-4db4-b661-5607276747a0" />
         <generalsInternal>
           <generalization Id="8e787c0c-a984-4d60-83b4-c65c05f5093c" isSubstitutable="false">
@@ -265,7 +305,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="f36e2f1c-aa90-4d5f-b096-700fc12b6c2f" name="PersonReader" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="f36e2f1c-aa90-4d5f-b096-700fc12b6c2f" name="PersonReader" isAbstract="true" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="182c6b90-c352-4280-a5a2-812cfb791503" />
         <generalsInternal>
           <generalization Id="a8fbd29f-7266-497c-a065-1188dad1c536" isSubstitutable="false">
@@ -382,20 +422,43 @@
         <elementDefinition Id="04444335-52c4-497c-bc8e-f30b627c2e77" />
       </referencedType>
     </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="dbc711df-f05f-4faf-919c-5fe4b0dc8abe" name="list&lt;TPerson*&gt;" isAbstract="false" isLeaf="false" cachedFullName="list&lt;TPerson*&gt;">
-        <elementDefinition Id="b58e903e-fb21-47f2-ac66-3b29a658876b" />
-      </referencedType>
-    </packageHasNamedElement>
     <logicalClassDesignerModelHasTypes>
       <class Id="21391109-3037-4520-a0ab-9ca8647abba0" name="Adress" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="7581ecc0-5fa6-4e00-a346-f0f75d779729" />
         <generalsInternal>
-          <generalization Id="c151a951-3270-4341-81f6-0f84313a248c" isSubstitutable="false">
+          <generalization Id="5b6296a2-81c1-42bd-b0e9-39e92c68997d" isSubstitutable="false">
             <classMoniker Id="e290a2ca-9c5f-4721-a3e7-76cce16801e4" LastKnownName="Object" />
-            <elementDefinition Id="d3b009a7-546d-4c32-9c41-bbdecf2d4fb7" />
+            <elementDefinition Id="7d20a16f-c2bc-434e-89c5-8bb35116b3e5" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association Id="40232c61-370c-443c-a094-dbd2c06e1589" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="05a572d3-02af-4f2c-854f-b92a6b8447d7" LastKnownName="Person" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb8fb782-47a1-476b-91b7-5beb7d753fd4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2d782360-6e3a-493b-97ce-0ba9a0f3c1cc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a7810262-b048-49c3-b334-5a0d79aab79e" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="ef3a3d79-b401-4701-9014-753f28cd5554" name="Lower" value="*">
+                      <elementDefinition Id="9392209e-fb21-4ccf-ac07-ca90edfe071c" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="ce3bf25f-1ad4-4860-a009-d0303af2468f" name="Upper" value="*">
+                      <elementDefinition Id="6965427f-27d8-4d40-9853-d3fbcb4df55f" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="575bb683-cb90-4ba4-8b35-6d9a578ddea8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c03e8ce4-db1f-480f-ae1b-7dbfa3f62e31" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="db011bf5-3f5b-4d34-a3c9-0900feed1357" name="mStreet" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="8e7d6117-ee25-4f52-bccc-aba004da4784" />
@@ -434,9 +497,9 @@
       <class Id="05a572d3-02af-4f2c-854f-b92a6b8447d7" name="Person" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="80abba64-7c0a-40c8-ba32-c29509231c2b" />
         <generalsInternal>
-          <generalization Id="f7ce2251-8cfe-4a32-8dc6-0bc91fd11034" isSubstitutable="false">
+          <generalization Id="8f127401-f68a-4d87-a47a-cf2b322fd866" isSubstitutable="false">
             <classMoniker Id="e290a2ca-9c5f-4721-a3e7-76cce16801e4" LastKnownName="Object" />
-            <elementDefinition Id="c185ecc3-f922-4c3d-8257-9122f213a744" />
+            <elementDefinition Id="5ab6b3a8-11b8-444d-ba89-d4e3dae1b962" />
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
@@ -554,8 +617,27 @@
         <elementDefinition Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d" />
       </referencedType>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a49278bd-fd9f-4d60-b97c-82fce6e9b6cd" name="list&lt;Person*&gt;" isAbstract="false" isLeaf="false" cachedFullName="list&lt;Person*&gt;">
+        <elementDefinition Id="da23453f-0bfa-4232-ad35-33f8574caf5e" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="72a01860-47f5-4f0f-9030-85dc71e4dcbf" name="AdressManagment">
     <elementDefinition Id="a464c6b5-3f06-47c5-a41d-50594c7dea79" />
+    <profileInstances>
+      <packageHasProfileInstances Id="2ac0e2bf-2796-40f8-9675-69c1ae1e577d">
+        <profileInstance Id="a2e04fde-cd67-4d19-96b1-506918b98c2b" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="07a930ec-d583-4a1f-8875-25e39b0e3c81">
+        <profileInstance Id="100369cb-24cc-48cb-b1eb-8aa7639b9fb5" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

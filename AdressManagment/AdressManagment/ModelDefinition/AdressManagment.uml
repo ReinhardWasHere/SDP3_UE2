@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="a464c6b5-3f06-47c5-a41d-50594c7dea79"
   name="AdressManagment" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -72,6 +72,108 @@
               LastKnownLocation="AdressManagment.uml" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association
+            Id="55c220d0-b5cd-43d4-8494-71cb63ab19f1"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7581ecc0-5fa6-4e00-a346-f0f75d779729"
+              LastKnownName="Adress"
+              LastKnownLocation="AdressManagment.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8b4b2912-7053-441a-a513-ecb84a123875"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="122e482c-702e-4a82-bb3e-466955198fca"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a7e568de-ec72-46c0-acfd-ac3d40c3acd3"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="52114f9f-58f9-4c8f-bce4-9c1fcddb30f6"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="230613d3-c3de-452e-8cfc-607e59f5b7bb"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="80abba64-7c0a-40c8-ba32-c29509231c2b"
+              LastKnownName="Person"
+              LastKnownLocation="AdressManagment.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c91dd6be-abab-4340-84af-c4c319fcb485"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f868930f-fe66-4020-9688-74e5490a7ed9"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="952c21ac-f618-493f-9f23-70e47598048f"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="0a3c9ac4-3c90-4eb8-95ca-08fca5b1379c"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="f7d0219c-b313-45ff-b84a-896d41078a53"
@@ -106,8 +208,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="b58e903e-fb21-47f2-ac66-3b29a658876b"
-                LastKnownName="list&lt;TPerson*&gt;"
+                Id="da23453f-0bfa-4232-ad35-33f8574caf5e"
+                LastKnownName="list&lt;Person*&gt;"
                 LastKnownLocation="AdressManagment.uml" />
             </type_NamedElement>
           </property>
@@ -282,7 +384,7 @@
       <class
         Id="fbd54097-6138-4f11-bb84-a7f35e7c7e93"
         name="AsciiWriter"
-        isAbstract="false"
+        isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
         <generalsInternal>
@@ -341,7 +443,7 @@
       <class
         Id="8444fa6a-cec4-4f87-a4f0-4305b47b4056"
         name="HtmlWriter"
-        isAbstract="false"
+        isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
         <generalsInternal>
@@ -400,7 +502,7 @@
       <class
         Id="e4b2245a-0161-4db4-b661-5607276747a0"
         name="AdressReader"
-        isAbstract="false"
+        isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
         <generalsInternal>
@@ -459,7 +561,7 @@
       <class
         Id="182c6b90-c352-4280-a5a2-812cfb791503"
         name="PersonReader"
-        isAbstract="false"
+        isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
         <generalsInternal>
@@ -666,7 +768,7 @@
         isActiveClass="false">
         <generalsInternal>
           <generalization
-            Id="d3b009a7-546d-4c32-9c41-bbdecf2d4fb7"
+            Id="7d20a16f-c2bc-434e-89c5-8bb35116b3e5"
             isSubstitutable="false">
             <classMoniker
               Id="0c2fc4f3-a7d0-4be3-9820-cf384db5194f"
@@ -674,6 +776,58 @@
               LastKnownLocation="AdressManagment.uml" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association
+            Id="c03e8ce4-db1f-480f-ae1b-7dbfa3f62e31"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="80abba64-7c0a-40c8-ba32-c29509231c2b"
+              LastKnownName="Person"
+              LastKnownLocation="AdressManagment.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d782360-6e3a-493b-97ce-0ba9a0f3c1cc"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="575bb683-cb90-4ba4-8b35-6d9a578ddea8"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9392209e-fb21-4ccf-ac07-ca90edfe071c"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6965427f-27d8-4d40-9853-d3fbcb4df55f"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="8e7d6117-ee25-4f52-bccc-aba004da4784"
@@ -782,7 +936,7 @@
         isActiveClass="false">
         <generalsInternal>
           <generalization
-            Id="c185ecc3-f922-4c3d-8257-9122f213a744"
+            Id="5ab6b3a8-11b8-444d-ba89-d4e3dae1b962"
             isSubstitutable="false">
             <classMoniker
               Id="0c2fc4f3-a7d0-4be3-9820-cf384db5194f"

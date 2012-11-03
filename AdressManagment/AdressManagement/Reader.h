@@ -12,7 +12,6 @@ class Reader :
 	public Object
 {
 public:
-	virtual ~Reader();
 	virtual void Read(std::string const& filename, AdressManager* adressManager) = 0;
 };
 

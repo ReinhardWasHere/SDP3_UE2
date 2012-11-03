@@ -1,30 +1,33 @@
-﻿Build started 03.11.2012 15:43:00.
+﻿Build started 03.11.2012 15:57:42.
      1>Project "C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\AdressManagement.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Touching "Debug\AdressManagement.unsuccessfulbuild".
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Adress.cpp AdressManager.cpp AdressReader.cpp AsciiWriter.cpp HtmlWriter.cpp PersonReader.cpp
          AdressManager.cpp
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(21): error C2061: syntax error : identifier 'TAdresses'
-         Generating Code...
-         Compiling...
-         AsciiWriter.cpp
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(21): error C2061: syntax error : identifier 'TAdresses'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\asciiwriter.h(11): error C2061: syntax error : identifier 'TAdresses'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\asciiwriter.cpp(7): error C2061: syntax error : identifier 'TAdresses'
-         Generating Code...
-         Compiling...
-         HtmlWriter.cpp
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(21): error C2061: syntax error : identifier 'TAdresses'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\htmlwriter.h(11): error C2061: syntax error : identifier 'TAdresses'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\htmlwriter.cpp(7): error C2061: syntax error : identifier 'TAdresses'
          Generating Code...
          Skipping... (no relevant changes detected)
-         PersonReader.cpp
-         AdressReader.cpp
          Adress.cpp
+         PersonReader.cpp
+         HtmlWriter.cpp
+         AsciiWriter.cpp
+         AdressReader.cpp
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\Debug\AdressManagement.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\AdressManagement.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\Debug\AdressManagement.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\Debug\AdressManagement.lib" /MACHINE:X86 Debug\AdressManagement.exe.embed.manifest.res
+         Debug\Adress.obj
+         Debug\AdressManager.obj
+         Debug\AdressReader.obj
+         Debug\AsciiWriter.obj
+         Debug\HtmlWriter.obj
+         Debug\main.obj
+         Debug\Object.obj
+         Debug\Person.obj
+         Debug\PersonReader.obj
+     1>LINK : fatal error LNK1123: failure during conversion to COFF: file invalid or corrupt
      1>Done Building Project "C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\AdressManagement.vcxproj" (build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:00.82
+Time Elapsed 00:00:00.45

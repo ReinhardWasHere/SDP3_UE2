@@ -21,9 +21,6 @@
     <ClCompile Include="Object.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Writer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="HtmlWriter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -33,21 +30,21 @@
     <ClCompile Include="AsciiWriter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Reader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="AdressReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PersonReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Adress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Person.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Object.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IAdressManagerReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AdressManager.h">

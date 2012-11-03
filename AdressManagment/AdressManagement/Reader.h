@@ -1,14 +1,19 @@
 #ifndef READER_H
 #define READER_H
 
-#include "IAdressManagerReader.h"
+#include <string>
+#include "Object.h"
+//#include "IAdressManagerReader.h"
+//#include "AdressManager.h"
+
+class AdressManager;	//forward declaration
 
 class Reader :
 	public Object
 {
 public:
 	virtual ~Reader();
-	virtual void Read(std::string const& filename, IAdressManagerReader* adressManager) = 0;
-}
+	virtual void Read(std::string const& filename, AdressManager* adressManager) = 0;
+};
 
 #endif

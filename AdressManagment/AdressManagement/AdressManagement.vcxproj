@@ -74,15 +74,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Adress.cpp" />
     <ClCompile Include="AdressManager.cpp" />
     <ClCompile Include="AdressReader.cpp" />
     <ClCompile Include="AsciiWriter.cpp" />
     <ClCompile Include="HtmlWriter.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Person.cpp" />
     <ClCompile Include="PersonReader.cpp" />
-    <ClCompile Include="Reader.cpp" />
-    <ClCompile Include="Writer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Adress.h" />
@@ -90,7 +90,6 @@
     <ClInclude Include="AdressReader.h" />
     <ClInclude Include="AsciiWriter.h" />
     <ClInclude Include="HtmlWriter.h" />
-    <ClInclude Include="IAdressManagerReader.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="PersonReader.h" />

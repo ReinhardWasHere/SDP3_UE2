@@ -5,6 +5,6 @@ PersonReader::~PersonReader()
 {
 }
 
-void PersonReader::Read(std::string const& filename, IAdressManagerReader* adressManager)
+void PersonReader::Read(std::string const& filename, AdressManager* adressManager)
 {
 }

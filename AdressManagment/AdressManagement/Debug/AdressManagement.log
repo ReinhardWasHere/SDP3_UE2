@@ -1,190 +1,30 @@
-﻿Build started 02.11.2012 18:13:40.
+﻿Build started 03.11.2012 15:43:00.
      1>Project "C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\AdressManagement.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Touching "Debug\AdressManagement.unsuccessfulbuild".
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AdressManager.cpp AdressReader.cpp AsciiWriter.cpp HtmlWriter.cpp PersonReader.cpp Reader.cpp Writer.cpp
-         Writer.cpp
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(6): error C2504: 'Object' : base class undefined
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(9): error C2039: 'string' : is not a member of 'std'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(9): error C2061: syntax error : identifier 'string'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.cpp(4): error C2259: 'Writer' : cannot instantiate abstract class
-                 due to following members:
-                 'void Writer::Write(void)' : is abstract
-                 c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(9) : see declaration of 'Writer::Write'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.cpp(4): error C2556: 'Writer::~Writer(void)' : overloaded function differs only by return type from 'Writer::~Writer(void)'
-                 c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(8) : see declaration of 'Writer::~Writer'
-         Reader.cpp
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\iadressmanagerreader.h(7): error C2061: syntax error : identifier 'Adress'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\iadressmanagerreader.h(8): error C2061: syntax error : identifier 'Person'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(6): error C2236: unexpected 'class' 'Reader'. Did you forget a ';'?
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(6): error C2143: syntax error : missing ';' before ':'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(6): error C2059: syntax error : ':'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(7): error C2059: syntax error : 'public'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(8): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(8): error C2447: '{' : missing function header (old-style formal list?)
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.cpp(3): error C2653: 'Reader' : is not a class or namespace name
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.cpp(3): fatal error C1903: unable to recover from previous error(s); stopping compilation
-         PersonReader.cpp
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\personreader.h(6): error C2504: 'Reader' : base class undefined
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\personreader.h(9): error C2061: syntax error : identifier 'IAdressManagerReader'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\personreader.cpp(5): error C2577: 'PersonReader::~PersonReader' : a destructor cannot have a return type
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\personreader.cpp(8): error C2061: syntax error : identifier 'IAdressManagerReader'
-         HtmlWriter.cpp
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\iadressmanagerreader.h(7): error C2061: syntax error : identifier 'Adress'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\iadressmanagerreader.h(8): error C2061: syntax error : identifier 'Person'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\object.h(5): error C2236: unexpected 'class' 'Object'. Did you forget a ';'?
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\object.h(5): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\object.h(5): error C2447: '{' : missing function header (old-style formal list?)
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adress.h(9): error C2504: 'Object' : base class undefined
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adress.h(15): error C2146: syntax error : missing ';' before identifier 'mPersons'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adress.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adress.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(7): error C2236: unexpected 'class' 'Person'. Did you forget a ';'?
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(7): error C2143: syntax error : missing ';' before ':'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(7): error C2059: syntax error : ':'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(8): error C2059: syntax error : 'public'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(9): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(9): error C2447: '{' : missing function header (old-style formal list?)
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(6): error C2504: 'Object' : base class undefined
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(9): error C2061: syntax error : identifier 'TAdresses'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(6): error C2236: unexpected 'class' 'Reader'. Did you forget a ';'?
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(6): error C2143: syntax error : missing ';' before ':'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(6): error C2059: syntax error : ':'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(7): error C2059: syntax error : 'public'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(8): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(8): error C2447: '{' : missing function header (old-style formal list?)
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(14): error C2065: 'Person' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(14): error C2059: syntax error : '>'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(15): error C2653: 'TPersons' : is not a class or namespace name
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(20): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(25): error C2065: 'Reader' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(25): error C2065: 'reader' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(25): error C2143: syntax error : missing ',' before ')'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(26): error C2065: 'writer' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(26): error C2275: 'Writer' : illegal use of this type as an expression
-                 c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(4) : see declaration of 'Writer'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(26): error C2143: syntax error : missing ',' before ')'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(31): error C2143: syntax error : missing ';' before '}'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\htmlwriter.h(8): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\htmlwriter.h(12): error C2143: syntax error : missing ';' before '}'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\htmlwriter.cpp(4): error C2653: 'HtmlWriter' : is not a class or namespace name
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\htmlwriter.cpp(4): fatal error C1903: unable to recover from previous error(s); stopping compilation
-         AsciiWriter.cpp
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\iadressmanagerreader.h(7): error C2061: syntax error : identifier 'Adress'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\iadressmanagerreader.h(8): error C2061: syntax error : identifier 'Person'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\object.h(5): error C2236: unexpected 'class' 'Object'. Did you forget a ';'?
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\object.h(5): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\object.h(5): error C2447: '{' : missing function header (old-style formal list?)
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adress.h(9): error C2504: 'Object' : base class undefined
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adress.h(15): error C2146: syntax error : missing ';' before identifier 'mPersons'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adress.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adress.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(7): error C2236: unexpected 'class' 'Person'. Did you forget a ';'?
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(7): error C2143: syntax error : missing ';' before ':'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(7): error C2059: syntax error : ':'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(8): error C2059: syntax error : 'public'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(9): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(9): error C2447: '{' : missing function header (old-style formal list?)
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(6): error C2504: 'Object' : base class undefined
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(9): error C2061: syntax error : identifier 'TAdresses'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(6): error C2236: unexpected 'class' 'Reader'. Did you forget a ';'?
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(6): error C2143: syntax error : missing ';' before ':'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(6): error C2059: syntax error : ':'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(7): error C2059: syntax error : 'public'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(8): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(8): error C2447: '{' : missing function header (old-style formal list?)
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(14): error C2065: 'Person' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(14): error C2059: syntax error : '>'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(15): error C2653: 'TPersons' : is not a class or namespace name
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(20): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(25): error C2065: 'Reader' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(25): error C2065: 'reader' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(25): error C2143: syntax error : missing ',' before ')'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(26): error C2065: 'writer' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(26): error C2275: 'Writer' : illegal use of this type as an expression
-                 c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(4) : see declaration of 'Writer'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(26): error C2143: syntax error : missing ',' before ')'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(31): error C2143: syntax error : missing ';' before '}'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\asciiwriter.h(8): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\asciiwriter.h(12): error C2143: syntax error : missing ';' before '}'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\asciiwriter.cpp(4): error C2653: 'AsciiWriter' : is not a class or namespace name
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\asciiwriter.cpp(4): fatal error C1903: unable to recover from previous error(s); stopping compilation
-         AdressReader.cpp
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressreader.h(6): error C2504: 'Reader' : base class undefined
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressreader.h(9): error C2039: 'string' : is not a member of 'std'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressreader.h(9): error C2061: syntax error : identifier 'string'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressreader.cpp(4): error C2577: 'AdressReader::~AdressReader' : a destructor cannot have a return type
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressreader.cpp(7): error C2039: 'string' : is not a member of 'std'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressreader.cpp(7): error C2065: 'string' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressreader.cpp(7): error C2143: syntax error : missing ')' before 'const'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressreader.cpp(7): error C2761: 'void AdressReader::Read(void)' : member function redeclaration not allowed
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressreader.cpp(7): error C2059: syntax error : ')'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressreader.cpp(8): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressreader.cpp(8): error C2447: '{' : missing function header (old-style formal list?)
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Adress.cpp AdressManager.cpp AdressReader.cpp AsciiWriter.cpp HtmlWriter.cpp PersonReader.cpp
          AdressManager.cpp
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\iadressmanagerreader.h(7): error C2061: syntax error : identifier 'Adress'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\iadressmanagerreader.h(8): error C2061: syntax error : identifier 'Person'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\object.h(5): error C2236: unexpected 'class' 'Object'. Did you forget a ';'?
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\object.h(5): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\object.h(5): error C2447: '{' : missing function header (old-style formal list?)
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adress.h(9): error C2504: 'Object' : base class undefined
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adress.h(15): error C2146: syntax error : missing ';' before identifier 'mPersons'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adress.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adress.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(7): error C2236: unexpected 'class' 'Person'. Did you forget a ';'?
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(7): error C2143: syntax error : missing ';' before ':'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(7): error C2059: syntax error : ':'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(8): error C2059: syntax error : 'public'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(9): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\person.h(9): error C2447: '{' : missing function header (old-style formal list?)
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(6): error C2504: 'Object' : base class undefined
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(9): error C2061: syntax error : identifier 'TAdresses'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(6): error C2236: unexpected 'class' 'Reader'. Did you forget a ';'?
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(6): error C2143: syntax error : missing ';' before ':'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(6): error C2059: syntax error : ':'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(7): error C2059: syntax error : 'public'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(8): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\reader.h(8): error C2447: '{' : missing function header (old-style formal list?)
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(14): error C2065: 'Person' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(14): error C2059: syntax error : '>'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(15): error C2653: 'TPersons' : is not a class or namespace name
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(20): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(25): error C2065: 'Reader' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(25): error C2065: 'reader' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(25): error C2143: syntax error : missing ',' before ')'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(26): error C2065: 'writer' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(26): error C2275: 'Writer' : illegal use of this type as an expression
-                 c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(4) : see declaration of 'Writer'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(26): error C2143: syntax error : missing ',' before ')'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.h(31): error C2143: syntax error : missing ';' before '}'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(4): error C2653: 'AdressManager' : is not a class or namespace name
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(5): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(6): error C2143: syntax error : missing ';' before '}'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(8): error C2653: 'AdressManager' : is not a class or namespace name
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(9): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(10): error C2143: syntax error : missing ';' before '}'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(12): error C2653: 'AdressManager' : is not a class or namespace name
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(13): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(14): error C2143: syntax error : missing ';' before '}'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(16): error C2653: 'AdressManager' : is not a class or namespace name
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(16): error C2065: 'Reader' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(16): error C2065: 'reader' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(16): error C2143: syntax error : missing ',' before ')'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(17): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(18): error C2143: syntax error : missing ';' before '}'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(20): error C2653: 'AdressManager' : is not a class or namespace name
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(20): error C2065: 'writer' : undeclared identifier
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(20): error C2275: 'Writer' : illegal use of this type as an expression
-                 c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(4) : see declaration of 'Writer'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(20): error C2143: syntax error : missing ',' before ')'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(21): error C2143: syntax error : missing ';' before '{'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(22): error C2143: syntax error : missing ';' before '}'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(23): error C2143: syntax error : missing ';' before '}'
-     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\adressmanager.cpp(23): fatal error C1004: unexpected end-of-file found
+     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(21): error C2061: syntax error : identifier 'TAdresses'
          Generating Code...
+         Compiling...
+         AsciiWriter.cpp
+     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(21): error C2061: syntax error : identifier 'TAdresses'
+     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\asciiwriter.h(11): error C2061: syntax error : identifier 'TAdresses'
+     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\asciiwriter.cpp(7): error C2061: syntax error : identifier 'TAdresses'
+         Generating Code...
+         Compiling...
+         HtmlWriter.cpp
+     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\writer.h(21): error C2061: syntax error : identifier 'TAdresses'
+     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\htmlwriter.h(11): error C2061: syntax error : identifier 'TAdresses'
+     1>c:\users\bernhard\documents\github\sdp3_ue2\adressmanagment\adressmanagement\htmlwriter.cpp(7): error C2061: syntax error : identifier 'TAdresses'
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         PersonReader.cpp
+         AdressReader.cpp
+         Adress.cpp
      1>Done Building Project "C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\AdressManagement.vcxproj" (build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:01.09
+Time Elapsed 00:00:00.82

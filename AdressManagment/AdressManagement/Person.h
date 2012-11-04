@@ -20,6 +20,11 @@ public:
 	size_t GetIndex() const;
 	std::string GetFirstName() const;
 	std::string GetLastName() const;
+
+	void SetIndex(size_t index);
+	void SetFirstName(std::string firstName);
+	void SetLastName(std::string lastName);
+	
 private:
 	size_t mIndex;
 	std::string mFirstName;

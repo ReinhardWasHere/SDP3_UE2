@@ -22,3 +22,18 @@ std::string Person::GetLastName() const
 {
 	return mLastName;
 }
+
+void Person::SetIndex(size_t index)
+{
+	mIndex = index;
+}
+
+void Person::SetFirstName(std::string firstName)
+{
+	mFirstName = firstName;
+}
+
+void Person::SetLastName(std::string lastName)
+{
+	mLastName = lastName;
+}

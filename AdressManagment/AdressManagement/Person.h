@@ -5,11 +5,6 @@
 #include <list>
 #include "Object.h"
 
-//#include "AdressManager.h"
-//#include "Adress.h"
-
-//#include "IAdressManagerReader.h"
-
 class Person :
 	public Object
 {

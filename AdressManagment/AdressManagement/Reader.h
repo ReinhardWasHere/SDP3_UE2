@@ -3,8 +3,6 @@
 
 #include <string>
 #include "Object.h"
-//#include "IAdressManagerReader.h"
-//#include "AdressManager.h"
 
 class AdressManager;	//forward declaration
 

@@ -7,8 +7,6 @@
 #include "Object.h"
 #include "Adress.h"
 
-//#include "IAdressManagerReader.h"
-
 typedef std::list<Adress*>  TAdresses;
 typedef TAdresses::const_iterator TAdressesItor;
 

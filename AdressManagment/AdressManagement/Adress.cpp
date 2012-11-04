@@ -28,7 +28,7 @@ std::string Adress::GetStreet() const
 	return mStreet;
 }
 
-std::string Adress::GetHouseNumber() const
+size_t Adress::GetHouseNumber() const
 {
 	return mHouseNumber;
 }
@@ -36,4 +36,29 @@ std::string Adress::GetHouseNumber() const
 TPersons const * Adress::GetPersons() const
 {
 	return &mPersons;
+}
+
+void Adress::SetZipCode(size_t const& zipCode)
+{
+	mZipCode = zipCode;
+}
+
+void Adress::SetCity(std::string const& city)
+{
+	mCity = city;
+}
+
+void Adress::SetStreet(std::string const& street)
+{
+	mStreet = street;
+}
+
+void Adress::SetHouseNumber(size_t houseNumber)
+{
+	mHouseNumber = houseNumber;
+}
+
+void Adress::SetPersons(TPersons persons)
+{
+	mPersons = persons;
 }

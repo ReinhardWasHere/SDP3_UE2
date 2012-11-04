@@ -6,9 +6,6 @@
 #include "Object.h"
 #include "Person.h"
 
-//#include "AdressManager.h"
-//#include "IAdressManagerReader.h"
-
 typedef std::list<Person*> TPersons;
 typedef TPersons::const_iterator TPersonsItor;
 
@@ -24,13 +21,19 @@ public:
 	size_t GetZipCode() const;
 	std::string GetCity() const;
 	std::string GetStreet() const;
-	std::string GetHouseNumber() const;
+	size_t GetHouseNumber() const;
 	TPersons const * GetPersons() const;
+
+	void SetZipCode(size_t const& zipCode);
+	void SetCity(std::string const& city);
+	void SetStreet(std::string const& street);
+	void SetHouseNumber(size_t houseNumber);
+	void SetPersons(TPersons persons);
 private:
 	size_t mZipCode;
 	std::string mCity;
 	std::string mStreet;
-	std::string mHouseNumber;
+	size_t mHouseNumber;
 	TPersons mPersons;
 };
 

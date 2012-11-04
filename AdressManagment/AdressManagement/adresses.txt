@@ -3,3 +3,5 @@
 # created on: 04.11.2012
 # description: stores all adresses
 #####################################
+Hinterdorf 8 4020 Linz
+MI6 1 3092 London

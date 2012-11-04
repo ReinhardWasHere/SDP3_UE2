@@ -17,11 +17,10 @@ void PersonReader::Read(std::string const& filename, AdressManager* adressManage
 
 	size_t pos = 0;	//help variable
 	
-
 	while(!file.eof())
 	{
 		getline(file,buffer);
-		if (buffer[0] != '#')
+		if ((buffer != "") && (buffer[0] != '#'))
 		{
 			Person* person = new Person;
 			

@@ -4,13 +4,11 @@
 #include <string>
 #include <list>
 #include <iterator>
-//#include "IAdressManagerReader.h"
 #include "Object.h"
 #include "Adress.h"
 #include "Person.h"
 #include "Writer.h"
 #include "Reader.h"
-
 
 class AdressManager :
 	public Object

@@ -18,6 +18,8 @@ public:
 	~Person();
 
 	size_t GetIndex() const;
+	std::string GetFirstName() const;
+	std::string GetLastName() const;
 private:
 	size_t mIndex;
 	std::string mFirstName;

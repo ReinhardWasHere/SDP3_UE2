@@ -11,8 +11,6 @@
 #include "Writer.h"
 #include "Reader.h"
 
-typedef std::list<Adress*>  TAdresses;
-typedef TAdresses::iterator TAdressesItor;
 
 class AdressManager :
 	public Object

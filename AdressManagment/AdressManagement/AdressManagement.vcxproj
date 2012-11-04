@@ -83,6 +83,9 @@
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="PersonReader.cpp" />
+    <ClCompile Include="Scanner\scanner.cpp" />
+    <ClCompile Include="Scanner\scanner_impl.cpp" />
+    <ClCompile Include="Scanner\symbol.cpp" />
     <ClCompile Include="Writer.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -95,7 +98,15 @@
     <ClInclude Include="Person.h" />
     <ClInclude Include="PersonReader.h" />
     <ClInclude Include="Reader.h" />
+    <ClInclude Include="Scanner\base.h" />
+    <ClInclude Include="Scanner\scanner.h" />
+    <ClInclude Include="Scanner\scanner_impl.h" />
+    <ClInclude Include="Scanner\symbol.h" />
     <ClInclude Include="Writer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="adresses.txt" />
+    <None Include="persons1.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

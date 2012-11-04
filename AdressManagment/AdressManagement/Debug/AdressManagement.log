@@ -1,21 +1,27 @@
-﻿Build started 11/4/2012 5:22:00 PM.
-     1>Project "D:\VS_Projects\FH_HSD\Semester_3\Git\SDP3_UE2\AdressManagment\AdressManagement\AdressManagement.vcxproj" on node 2 (build target(s)).
+﻿Build started 04.11.2012 17:35:56.
+     1>Project "C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\AdressManagement.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Debug\AdressManagement.unsuccessfulbuild".
+         Creating "Debug\AdressManagement.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Adress.cpp AdressManager.cpp AsciiWriter.cpp HtmlWriter.cpp Writer.cpp
-         AsciiWriter.cpp
-         Generating Code...
-         Compiling...
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Adress.cpp AdressManager.cpp AdressReader.cpp AsciiWriter.cpp HtmlWriter.cpp main.cpp Object.cpp Person.cpp PersonReader.cpp Scanner\scanner.cpp Scanner\scanner_impl.cpp Scanner\symbol.cpp Writer.cpp
          Writer.cpp
+         symbol.cpp
+         scanner_impl.cpp
+         scanner.cpp
+         PersonReader.cpp
+         Person.cpp
+         Object.cpp
+         main.cpp
          HtmlWriter.cpp
+         AsciiWriter.cpp
+         AdressReader.cpp
          AdressManager.cpp
          Adress.cpp
          Generating Code...
        ManifestResourceCompile:
-         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\AdressManagement.exe.embed.manifest.res" Debug\AdressManagement_manifest.rc 
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\VS_Projects\FH_HSD\Semester_3\Git\SDP3_UE2\AdressManagment\Debug\AdressManagement.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\AdressManagement.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\VS_Projects\FH_HSD\Semester_3\Git\SDP3_UE2\AdressManagment\Debug\AdressManagement.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\VS_Projects\FH_HSD\Semester_3\Git\SDP3_UE2\AdressManagment\Debug\AdressManagement.lib" /MACHINE:X86 Debug\AdressManagement.exe.embed.manifest.res
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\Debug\AdressManagement.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\AdressManagement.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\Debug\AdressManagement.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\Debug\AdressManagement.lib" /MACHINE:X86 Debug\AdressManagement.exe.embed.manifest.res
          Debug\Adress.obj
          Debug\AdressManager.obj
          Debug\AdressReader.obj
@@ -25,18 +31,22 @@
          Debug\Object.obj
          Debug\Person.obj
          Debug\PersonReader.obj
+         Debug\scanner.obj
+         Debug\scanner_impl.obj
+         Debug\symbol.obj
          Debug\Writer.obj
+         LINK : C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\Debug\AdressManagement.exe not found or not built by the last incremental link; performing full link
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\AdressManagement.exe.embed.manifest" /manifest Debug\AdressManagement.exe.intermediate.manifest
          All outputs are up-to-date.
        LinkEmbedManifest:
          All outputs are up-to-date.
-         AdressManagement.vcxproj -> D:\VS_Projects\FH_HSD\Semester_3\Git\SDP3_UE2\AdressManagment\Debug\AdressManagement.exe
+         AdressManagement.vcxproj -> C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\Debug\AdressManagement.exe
        FinalizeBuildStatus:
          Deleting file "Debug\AdressManagement.unsuccessfulbuild".
          Touching "Debug\AdressManagement.lastbuildstate".
-     1>Done Building Project "D:\VS_Projects\FH_HSD\Semester_3\Git\SDP3_UE2\AdressManagment\AdressManagement\AdressManagement.vcxproj" (build target(s)).
+     1>Done Building Project "C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\AdressManagement.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.37
+Time Elapsed 00:00:03.96

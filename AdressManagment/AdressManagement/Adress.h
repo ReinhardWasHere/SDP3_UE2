@@ -18,6 +18,8 @@ class Adress :
 public:
 	Adress();
 	~Adress();
+
+	void AddPerson(Person* person);
 private:
 	size_t mZipCode;
 	std::string mCity;

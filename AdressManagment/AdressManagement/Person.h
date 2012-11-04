@@ -16,6 +16,8 @@ class Person :
 public:
 	Person();
 	~Person();
+
+	size_t GetIndex() const;
 private:
 	size_t mIndex;
 	std::string mFirstName;

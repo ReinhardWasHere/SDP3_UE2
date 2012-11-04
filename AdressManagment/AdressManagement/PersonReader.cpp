@@ -2,7 +2,6 @@
 #include <sstream>
 #include <fstream>
 #include "PersonReader.h"
-#include "Scanner\scanner.h"
 #include "AdressManager.h"
 
 using namespace std;

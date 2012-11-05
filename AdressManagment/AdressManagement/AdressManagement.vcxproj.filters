@@ -79,13 +79,28 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="adresses.txt">
+    <None Include="testcase0_person.txt">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="persons1.txt">
+    <None Include="testcase0_adress.txt">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="persons2.txt">
+    <None Include="testcase1_adress.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="testcase2_person.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="testcase3_person.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="testcase3_adress.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="testcase4_person.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="testcase5_adress.txt">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

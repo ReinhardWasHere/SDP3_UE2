@@ -1,11 +1,15 @@
 #include "Adress.h"
 
-Adress::Adress()
-{
-}
 
 Adress::~Adress()
 {
+	TPersonsItor itor = mPersons.begin();
+
+	while (itor != mPersons.end())
+	{
+		delete (*itor);
+		++itor;
+	}
 }
 
 void Adress::AddPerson(Person* person)

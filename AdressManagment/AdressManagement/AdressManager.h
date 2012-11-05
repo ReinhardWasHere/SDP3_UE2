@@ -14,11 +14,14 @@ class AdressManager :
 	public Object
 {
 public:
+	~AdressManager();
 	void AddAdress(Adress* adress);
 	void AddPerson(Person * person);
 	void LinkAdresses();
 	void ReadFile(std::string const& filename, Reader* reader);
-	void WriteAdresses(std::string const& filename, Writer* writer);
+	void WriteAdresses(std::string const& filename, Writer* writer) const;
+	void AdressManager::ClearAdressList();
+	bool IsAdressListEmpty() const;
 
 private:
 	TAdresses mAdresses;

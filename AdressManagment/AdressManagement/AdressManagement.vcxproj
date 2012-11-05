@@ -98,9 +98,14 @@
     <ClInclude Include="Writer.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="adresses.txt" />
-    <None Include="persons1.txt" />
-    <None Include="persons2.txt" />
+    <None Include="testcase0_adress.txt" />
+    <None Include="testcase0_person.txt" />
+    <None Include="testcase1_adress.txt" />
+    <None Include="testcase2_person.txt" />
+    <None Include="testcase3_adress.txt" />
+    <None Include="testcase3_person.txt" />
+    <None Include="testcase4_person.txt" />
+    <None Include="testcase5_adress.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

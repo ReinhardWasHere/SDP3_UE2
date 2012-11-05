@@ -9,9 +9,6 @@ class Person :
 	public Object
 {
 public:
-	Person();
-	~Person();
-
 	size_t GetIndex() const;
 	std::string GetFirstName() const;
 	std::string GetLastName() const;

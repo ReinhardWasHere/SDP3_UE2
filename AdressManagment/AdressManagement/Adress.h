@@ -13,9 +13,7 @@ class Adress :
 	public Object
 {
 public:
-	Adress();
 	~Adress();
-
 	void AddPerson(Person* person);
 
 	size_t GetZipCode() const;

@@ -1,0 +1,8 @@
+#####################################
+# file:  testcase4_person.txt
+# created on: 04.11.2012
+# description: stores persons
+#####################################
+Reinhard Penn 0
+Bernhard Selymes 2
+Member1 Testfamily2 1

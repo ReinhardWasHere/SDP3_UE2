@@ -58,6 +58,8 @@ void HtmlWriter::WriteAdress(Adress const * const adr, std::ofstream& stream)
 	while (person_itor != persons->end())
 	{
 		WritePerson(*person_itor, stream);
+
+		++person_itor;
 	}
 	stream << "<br/><br/>" << std::endl;
 	stream << "</p>" << std::endl;

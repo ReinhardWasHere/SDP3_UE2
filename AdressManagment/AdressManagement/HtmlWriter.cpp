@@ -1,3 +1,10 @@
+///////////////////////////////////////////////////////////////////////////
+// Workfile : HtmlWriter.cpp
+// Author : Reinhard Penn, Bernhard Selymes
+// Date : 5.11.2012
+// Description : Definition of methods of class HtmlWriter
+///////////////////////////////////////////////////////////////////////////
+
 #include <string>
 #include <iostream>
 #include "HtmlWriter.h"

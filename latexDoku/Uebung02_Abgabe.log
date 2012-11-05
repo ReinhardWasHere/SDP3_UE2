@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.10.29)  5 NOV 2012 18:19
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.10.29)  5 NOV 2012 23:09
 entering extended mode
 **Uebung02_Abgabe.tex
 (C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\latexDoku\Uebung02_Abgabe.tex
@@ -695,103 +695,201 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 61.
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Overfull \hbox (2.25198pt too wide) in paragraph at lines 63--64
+[]\OT1/ptm/m/n/12 Implementierung der Klassen Adress-Man-ager, Writer, Asci-i-W
+riter, Html-Writer, Per-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--88
 
  []
 
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<../Klassendiagramm.png, id=7, 1161.58969pt x 642.14906pt>
+File: ../Klassendiagramm.png Graphic file (type png)
+
+<use ../Klassendiagramm.png>
+Package pdftex.def Info: ../Klassendiagramm.png used on input line 95.
+(pdftex.def)             Requested size: 1161.58687pt x 642.14749pt.
+
+Overfull \vbox (20.17361pt too high) has occurred while \output is active []
+
+
+[2 <C:/Users/Bernhard/Documents/GitHub/SDP3_UE2/Klassendiagramm.png>] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 139--141
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--132
+Underfull \hbox (badness 10000) in paragraph at lines 142--147
 
  []
 
 
-Overfull \hbox (8.02475pt too wide) in paragraph at lines 133--136
-[]\OT1/ptm/b/n/12 Methode "Ad-dRoom": \OT1/ptm/m/n/12 F[]ugt R[]aume zum Raum-p
-lan hinzu. Ein Raum wird nur dann hinzugef[]ugt
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--136
+Underfull \hbox (badness 10000) in paragraph at lines 148--153
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+Underfull \hbox (badness 10000) in paragraph at lines 154--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--142
+Underfull \hbox (badness 10000) in paragraph at lines 160--166
 
  []
 
 
-Overfull \hbox (0.64407pt too wide) in paragraph at lines 143--145
-[]\OT1/ptm/b/n/12 Methode "AddSide": \OT1/ptm/m/n/12 F[]ugt Seiten zu einem Rau
-m hinzu. Eine Seite wird nur dann hinzugef[]ugt,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--145
+Underfull \hbox (badness 10000) in paragraph at lines 167--173
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 174--179
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
-[3]
-Overfull \hbox (12.10387pt too wide) in paragraph at lines 153--154
-\OT1/ptm/m/n/12 Repr[]asentiert einen Durch-gang. Hat einen Mem-ber der spe-ich
-ert ob die T[]ur of-fen oder geschlossen
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--190
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--200
 
  []
 
 [4]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 209.
+Underfull \hbox (badness 10000) in paragraph at lines 202--209
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--209
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--222
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--222
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--237
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--237
+
+ []
+
+[5]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 241.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Overfull \hbox (27.15569pt too wide) in paragraph at lines 240--240
-[]\OT1/pcr/m/n/12 Error occured in Room::AddSide: Max amount of walls already r
-eached[] 
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\O
+bject.h
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 8.
+)
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\O
+bject.cpp) [6]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\A
+dressManager.h) [7]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\A
+dressManager.cpp [8]) [9]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\A
+dress.h) [10]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\P
+erson.h) [11]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\W
+riter.h) [12]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\W
+riter.cpp) [13]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\H
+tmlWriter.h) [14]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\H
+tmlWriter.cpp [15]) [16]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\A
+sciiWriter.h) [17]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\A
+sciiWriter.cpp [18]) [19]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\R
+eader.h) [20]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\P
+ersonReader.h) [21]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\P
+ersonReader.cpp [22]) [23]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\A
+dressReader.h) [24]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\A
+dressReader.cpp [25]) [26]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\AdressManagment\AdressManagement\m
+ain.cpp [27] [28] [29] [30] [31]) [32]
+Overfull \hbox (19.95569pt too wide) in paragraph at lines 300--300
+[]\OT1/pcr/m/n/12 Testcase1: Valid adress file(single adress) and empty person 
+files[] 
  []
 
-[5] (C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\latexDoku\Uebung02_Abgabe.aux)
- ) 
+
+Overfull \hbox (41.55568pt too wide) in paragraph at lines 309--309
+[]\OT1/pcr/m/n/12 Valid adress file(single adress) and valid person file(single
+ person)[] 
+ []
+
+
+Overfull \hbox (27.15569pt too wide) in paragraph at lines 319--319
+[]\OT1/pcr/m/n/12 Valid adress file and valid person file, multiple adresses, p
+ersons[] 
+ []
+
+
+Overfull \hbox (34.35568pt too wide) in paragraph at lines 328--328
+[]\OT1/pcr/m/n/12 Valid adress file and valid person files, multiple adresses, 
+persons[] 
+ []
+
+[33] [34]
+(C:\Users\Bernhard\Documents\GitHub\SDP3_UE2\latexDoku\Uebung02_Abgabe.aux) ) 
 Here is how much of TeX's memory you used:
- 4557 strings out of 494045
- 62505 string characters out of 3145959
- 147715 words of memory out of 3000000
- 7790 multiletter control sequences out of 15000+200000
- 12244 words of font info for 28 fonts, out of 3000000 for 9000
+ 5284 strings out of 494045
+ 73062 string characters out of 3145959
+ 318715 words of memory out of 3000000
+ 8459 multiletter control sequences out of 15000+200000
+ 14859 words of font info for 34 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 32i,5n,58p,707b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on Uebung02_Abgabe.pdf (5 pages, 54074 bytes).
+ 32i,7n,58p,703b,1645s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C
+:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/urw/times/utmr8a.pfb>
+Output written on Uebung02_Abgabe.pdf (34 pages, 151500 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 129 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

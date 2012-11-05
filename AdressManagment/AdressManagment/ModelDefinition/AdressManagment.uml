@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="a464c6b5-3f06-47c5-a41d-50594c7dea79"
   name="AdressManagment" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -61,6 +61,20 @@
               LastKnownName="IAdressManagerReader"
               LastKnownLocation="AdressManagment.uml" />
           </interfaceRealization>
+          <dependency
+            Id="4f839ea6-481b-43ab-bd1a-2b4270284ae7">
+            <classMoniker
+              Id="ac69cddd-7478-407d-b13d-b5e91e7fde09"
+              LastKnownName="Writer"
+              LastKnownLocation="AdressManagment.uml" />
+          </dependency>
+          <dependency
+            Id="d7706788-7e68-4d43-ab29-b77223029468">
+            <classMoniker
+              Id="a829f9a1-d796-47dd-98e6-b6f2048933d4"
+              LastKnownName="Reader"
+              LastKnownLocation="AdressManagment.uml" />
+          </dependency>
         </suppliersInternal>
         <generalsInternal>
           <generalization
@@ -239,14 +253,14 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="f3f6932d-adbc-4f37-adee-fa32106ff41e"
-                  name="string"
+                  Id="cdf8a919-af75-42a6-bbb1-65eabb0f942b"
+                  name="string const&amp;"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="52746491-803e-4e4e-8cbc-987d06e81f13"
+                  Id="2b53a114-dca2-4afc-b900-45100f082be7"
                   name="Reader*"
                   direction="In"
                   isUnique="false" />
@@ -264,20 +278,6 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="a425f094-b50c-4fcf-9ed8-aa83ce4f05ad"
-                  name="string"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="4b56ccea-f1fc-4e4a-a55c-a5a6db0c48cd"
-                  name="Writer*"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="868a5d1a-5c6d-4e84-ab9a-1d7dd7503165"
                   direction="Return"
                   isUnique="false">
@@ -288,6 +288,20 @@
                       LastKnownLocation="AdressManagment.uml" />
                   </type_NamedElement>
                 </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b2f3ecc9-8f0e-4934-a6ab-d2970e19d502"
+                  name="string const&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="78ff7894-7761-4663-aab7-beedefaebda3"
+                  name="Writer*"
+                  direction="In"
+                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -377,6 +391,54 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="efdd6bb9-5cbf-4b37-830a-53a26a95926d"
+            name="ClearAdressList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a9e18021-f72b-4d93-9c90-c26b89a96013"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d"
+                      LastKnownName="void"
+                      LastKnownLocation="AdressManagment.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5ed97082-db1d-4fd9-b5be-9b1c5e24fb8a"
+            name="IsAdressListEmpty"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e0e49f60-6e49-4925-a3bd-1a4b3d6d43a3"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d"
+                      LastKnownName="void"
+                      LastKnownLocation="AdressManagment.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -384,7 +446,7 @@
       <class
         Id="fbd54097-6138-4f11-bb84-a7f35e7c7e93"
         name="AsciiWriter"
-        isAbstract="true"
+        isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <generalsInternal>
@@ -403,7 +465,7 @@
             name="Write"
             isLeaf="false"
             isStatic="false"
-            isAbstract="true"
+            isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <ownedParameters>
@@ -422,17 +484,95 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="68abff59-a2cb-4893-a6a4-98f0486c5ac0"
+                  Id="36fa766e-ac5d-42ae-81db-0e899c0ccf55"
                   name="string const&amp;"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="34595ff1-ceb4-4898-836f-3cef57c62470"
+                  Id="fbffe7f7-3ce8-4f26-9eb3-a8f7c182e9e1"
                   name="list&lt;Adress*&gt; const&amp;"
                   direction="In"
                   isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="be98272a-f4df-4e8f-84d1-2548a2bc1566"
+            name="WriteAdress"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="beff0a9f-2575-4e8b-94e3-c0b5216ac91f"
+                  name="Adress const * const"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fa7ba1e7-7ff7-4732-9ba4-2f3745ae0962"
+                  name="ofstream&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="35028d76-fd79-4413-ba82-b63e83b8a974"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d"
+                      LastKnownName="void"
+                      LastKnownLocation="AdressManagment.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9aaea528-3c20-49f2-824d-9bf5ffadc43e"
+            name="WritePerson"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6adff268-7ccc-4abf-8447-90a42f063b8b"
+                  name="Person const * const"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4f7d9771-878d-41be-9b4d-cbc518392f0c"
+                  name="ofstream&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="81a6bce6-7563-4d9e-a27f-00988e3d24f6"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d"
+                      LastKnownName="void"
+                      LastKnownLocation="AdressManagment.uml" />
+                  </type_NamedElement>
+                </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -443,7 +583,7 @@
       <class
         Id="8444fa6a-cec4-4f87-a4f0-4305b47b4056"
         name="HtmlWriter"
-        isAbstract="true"
+        isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <generalsInternal>
@@ -462,7 +602,7 @@
             name="Write"
             isLeaf="false"
             isStatic="false"
-            isAbstract="true"
+            isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <ownedParameters>
@@ -481,17 +621,95 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="6aa030e8-e555-402c-bfe8-b9bdc13564c4"
+                  Id="c0c34105-a581-4e91-9d29-1ab39306dbca"
                   name="string const&amp;"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="e742aa95-a7f0-44e8-a230-0833182a0930"
+                  Id="6f6fd5d0-ee1a-40f5-bad4-9873431480a0"
                   name="list&lt;Adress*&gt; const&amp;"
                   direction="In"
                   isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6e847a77-4f0d-4aaf-a566-384fa5b12772"
+            name="WriteAdress"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1fffb429-3a35-45d7-83d0-0573ebb4b3f7"
+                  name="Adress const * const"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="085bb48a-a0ad-4eb0-9298-e9d4fb10e285"
+                  name="ofstream&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6da3e227-44a1-493d-b037-4b713ef2994b"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d"
+                      LastKnownName="void"
+                      LastKnownLocation="AdressManagment.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fec73eee-7379-4be6-a04f-3ed829d3230f"
+            name="WritePerson"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d9f02b3f-6b52-4aad-a693-c059e80b52e6"
+                  name="Person const * const"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6139a451-0af8-46e8-9456-ed56ed3fb8cf"
+                  name="ofstream&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="870249e6-1682-487e-8657-c3593ae08a19"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d"
+                      LastKnownName="void"
+                      LastKnownLocation="AdressManagment.uml" />
+                  </type_NamedElement>
+                </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -502,7 +720,7 @@
       <class
         Id="e4b2245a-0161-4db4-b661-5607276747a0"
         name="AdressReader"
-        isAbstract="true"
+        isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <generalsInternal>
@@ -521,7 +739,7 @@
             name="Read"
             isLeaf="false"
             isStatic="false"
-            isAbstract="true"
+            isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <ownedParameters>
@@ -540,15 +758,15 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="19caa398-c08d-48dc-8373-ca256c20cc1f"
+                  Id="f90ab5e3-92f4-40a7-a158-ea3c7b5099c2"
                   name="string const&amp;"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="3cd34e7a-bd2b-4616-a027-74c1315ce11b"
-                  name="IAdressManagerReader*"
+                  Id="ab57d184-4526-4118-a9ef-6335742e6238"
+                  name="AdressManager*"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -561,7 +779,7 @@
       <class
         Id="182c6b90-c352-4280-a5a2-812cfb791503"
         name="PersonReader"
-        isAbstract="true"
+        isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <generalsInternal>
@@ -580,7 +798,7 @@
             name="Read"
             isLeaf="false"
             isStatic="false"
-            isAbstract="true"
+            isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <ownedParameters>
@@ -599,15 +817,15 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="bf1ada15-cbe9-424c-9f33-a49bb188e254"
+                  Id="20898e46-629f-4cbe-9e99-4d73acc2cfb0"
                   name="string const&amp;"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="89cd7409-034d-42a3-b08e-17eebbb212db"
-                  name="IAdressManagerReader*"
+                  Id="02189f82-3e36-4bc4-beea-1a7f878cc8ad"
+                  name="AdressManager*"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -628,6 +846,15 @@
         isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="97430275-e1ff-477e-ac0e-ae73a425929f">
+            <classMoniker
+              Id="d2e0f36f-8736-4e5b-aa53-8123caf91499"
+              LastKnownName="AdressManager"
+              LastKnownLocation="AdressManagment.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="4a28cf7b-f15c-428d-b0dc-66ad5e675e05"
@@ -655,23 +882,62 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d"
-                      LastKnownName="void"
+                      Id="3ab6a60c-14fd-4d03-afe1-6d4851af14b1"
+                      LastKnownName="void = 0"
                       LastKnownLocation="AdressManagment.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="ef842919-1128-49a9-81e1-39bf50b216ae"
+                  Id="fbd97b1f-78f9-41a8-8990-3781f0e6dbf6"
                   name="string const&amp;"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="db0d2951-218d-4d25-8052-3cb3b9b53810"
+                  Id="d6ef4a51-f34a-45bb-a05e-6d5f3bbb493b"
                   name="list&lt;Adress*&gt; const&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="00fbd12d-4043-4f77-9565-86ae26987a34"
+            name="OpenFile"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8ccca2f7-af37-406d-87b0-03442c547edb"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="54253960-a4a6-4920-8274-2f4bd2f825d3"
+                      LastKnownName="bool"
+                      LastKnownLocation="AdressManagment.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="668a9b23-8e88-426c-ba29-9fff4c8627b1"
+                  name="string const&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fc3c56b1-1f2e-4a2a-9cd1-a52bb4af80ef"
+                  name="ofstream"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -687,6 +953,15 @@
         isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="1810b150-3262-42d4-b0d0-46d9b5b005e0">
+            <classMoniker
+              Id="d2e0f36f-8736-4e5b-aa53-8123caf91499"
+              LastKnownName="AdressManager"
+              LastKnownLocation="AdressManagment.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="80516bc6-a179-4226-8e3a-6eee3bdf7dce"
@@ -714,23 +989,23 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d"
-                      LastKnownName="void"
+                      Id="3ab6a60c-14fd-4d03-afe1-6d4851af14b1"
+                      LastKnownName="void = 0"
                       LastKnownLocation="AdressManagment.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="35f50985-dbf1-4e30-94ae-0907be2610a0"
+                  Id="f8c87b1c-68aa-4b6e-816a-bb5529a21cc4"
                   name="string const&amp;"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="4a3e2f0e-aa1b-4e07-987b-2e6f1583c728"
-                  name="IAdressManagerReader*"
+                  Id="f575f8b8-ae90-4c4a-a80a-b4523a2a4b93"
+                  name="AdressManager*"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -925,6 +1200,39 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d118c3d3-2177-46fb-b4ca-12e47b897731"
+            name="AddPerson"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="20b4fbf6-f909-4ce6-8cd9-c037b8d96b90"
+                  name="Person*"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e6dbaa12-052d-4ea8-b7e3-895f221b803a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="bdaebcb9-6d6e-4f25-ad06-3cc762d89d8d"
+                      LastKnownName="void"
+                      LastKnownLocation="AdressManagment.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1108,6 +1416,16 @@
       <undefinedType
         Id="da23453f-0bfa-4232-ad35-33f8574caf5e"
         name="list&lt;Person*&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="54253960-a4a6-4920-8274-2f4bd2f825d3"
+        name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="3ab6a60c-14fd-4d03-afe1-6d4851af14b1"
+        name="void = 0" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

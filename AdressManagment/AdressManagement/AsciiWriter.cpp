@@ -1,3 +1,10 @@
+///////////////////////////////////////////////////////////////////////////
+// Workfile : AsciiWriter.cpp
+// Author : Reinhard Penn, Bernhard Selymes
+// Date : 5.11.2012
+// Description : Definition of methods of class AsciiWriter
+///////////////////////////////////////////////////////////////////////////
+
 #include <string>
 #include <iostream>
 #include "AsciiWriter.h"

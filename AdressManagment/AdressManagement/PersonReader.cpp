@@ -1,10 +1,16 @@
+///////////////////////////////////////////////////////////////////////////
+// Workfile : PersonReader.cpp
+// Author : Reinhard Penn, Bernhard Selymes
+// Date : 5.11.2012
+// Description : Definition of methods of class PersonReader
+///////////////////////////////////////////////////////////////////////////
+
 #include <string>
 #include <sstream>
 #include <fstream>
 #include <iostream>
 #include "PersonReader.h"
 #include "AdressManager.h"
-
 
 PersonReader::~PersonReader()
 {

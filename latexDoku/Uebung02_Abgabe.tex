@@ -36,14 +36,14 @@ commentstyle=\color{dkgreen},       % comment style
 \parindent 0pt
 
 \begin{document}
-\title{Übung 1}
+\title{Übung 2}
 \author{Bernhard Selymes, Reinhard Penn}
-\date{Oktober 2012}
+\date{November 2012}
 
 \normalsize
 
 %Pfad zu c++ Dateien
-\newcommand{\CodePath}{../AdressManagement/AdressManagement/}
+\newcommand{\CodePath}{../AdressManagment/AdressManagement/}
 
 %Beginn des Dokuments
 \section{Organisatorisches}
@@ -60,14 +60,14 @@ commentstyle=\color{dkgreen},       % comment style
 			\begin {itemize}
 				\item Planung
 				\item Klassendiagramm
-				\item Implementierung der Klassen Object, Roomlayout, Room, Side, Wall, Door
-				\item Testen aller Klassen		
+				\item Implementierung der Klassen AdressManager, Writer, AsciiWriter, HtmlWriter, Person, Adress
+				\item Testen alle Klassen
 			\end {itemize}
 		\item Bernhard Selymes
 			\begin {itemize}
 				\item Planung
 				\item Klassendiagramm
-				\item Implementierung der Klassen Object, Roomlayout, Room, Side, Wall, Door
+				\item Implementierung der Klassen Reader, PersonReader, AdressReader, Person, Adress
 				\item Dokumentation				
 			\end {itemize}
 	\end {itemize}
@@ -77,12 +77,14 @@ commentstyle=\color{dkgreen},       % comment style
 	\begin {itemize}
 		\item geschätzte Mh: 7h
 		\item tatsächlich: Reinhard (10h), Bernhard  (10h)
-
 	\end {itemize}
 
 
 \section{Systemspezifikation}
-Eine Software für einen Raumplan soll entwickelt werden. Ein Raumplan enthält mehrere Räume, jeder Raum hat 4 Seiten, die wiederum eine Wand oder ein Durchgang sein können. Die Räume sind alle gleich groß und liegen alle untereinander und nicht nebeneinander. Eine Wand hat eine Farbe, ein Durchgang ist offen oder geschlossen und verbindet einen oder zwei Räume - es gibt auch Durchgänge die nach draußen führen. Wenn zwei Durchgänge aufeinander treffen wird nur einer ausgegeben. Bei zwei Wänden werden beide ausgegeben. In der gesamten Datenstruktur können nur Objekte hinzugefügt, aber nicht gelöscht werden. Der gesamte Raumplan kann ausgedruckt werden. \\
+Es soll eine Software für die Verwaltung von Adressen und Personen erstellt werden. Die Daten werden aus verschiedenen Dateien eingelesen, danach werden sie verlinkt und können dann als Html- oder Acsii-Datei ausgegeben werden.
+\newline
+In beiden Dateien gibt es einen Header der überlesen werden kann. Die Einlesenreihenefolge der Dateien ist beliebig. Eine Personendatei enthält den Namen und Index von den Personen, eine Adressdatei Straße, Hausnummer, PLZ und Ort. Die Reihenfolge der Adressen gibt deren Index an.
+ \\
 
 
 \newpage
@@ -90,33 +92,42 @@ Eine Software für einen Raumplan soll entwickelt werden. Ein Raumplan enthält 
 
 \subsection {Klassendiagramm}
 
-%\includegraphics[angle=90,scale=0.7] {../Klassendiagramm.png}
+\includegraphics[angle=90,scale=0.6] {../Klassendiagramm.png}
 
-
+\newpage
 \subsection {Komponentenübersicht}
 \begin {itemize} 
 	\item Klasse "Object":
 	\newline
 	Basis aller Basisklassen.
-	\item Klasse "RoomLayout":
+	\item Klasse "AdressManager":
 	\newline
-	Beinhaltet die Räume und kann diese mithilfe einer Printfunktion ausgeben.
-	\item Klasse "Room":
+	Beinhaltet die eingelesene Adressen und Personen und kann diese verlinken.
+	\item Klasse "Adress":
 	\newline	
-	Beinhaltet vier Seiten und kann mithilfe einer Printfunktion ausgegeben werden.
-	\item Klasse "Side":
+	Beinhalten die Daten einer Adresse und zusätzlich die Personen die in dieser Adresse wohnen.
+	\item Klasse "Person":
 	\newline
-	Abstrakte Klasse, von der Wall und Door abgeleitet werden. Speichert die Himmelsrichtung der Seite.
-	\item Klasse "Wall":
+	Beinhaltet die Daten einer Person.
+	\item Klasse "Writer":
 	\newline
-	Hat einen Member der die Farbe der Wand speichert.
-	\item Klasse "Door": 
+	Abstrakte Basisklasse.
+	\item Klasse "HtmlWriter": 
 	\newline
-	Speichert ob Door offen oder geschlossen ist und welche Räume von Door verbunden werden.
-	\item Enumeration "Direction":
+	Wird von "Writer" abgeleitet, gibt die Daten in einer Html-Datei aus.
+	\item Klasse "AsciiWriter":
 	\newline
-	Hat vier Zustände: North, West, East, South
-
+	Wird von "Writer" abgeleitet, gibt die Daten in einer Ascii-Datei aus.
+	\item Klasse "Reader"
+	\newline
+	Abstrakte Basisklasse.
+	\item Klasse "AdressReader"
+	\newline
+	Wird von "Reader" abgeleitet, liest die Adressen ein.
+	\item Klasse "PersonReader"
+	\newline
+	Wird von "Reader" abgeleitet, liest die Personen ein.
+	
 \end {itemize}
 
 \newpage
@@ -124,130 +135,215 @@ Eine Software für einen Raumplan soll entwickelt werden. Ein Raumplan enthält 
 \subsection {Klasse "Object"}
 Abstrakte Basisklasse aller Klassen. Von ihr werden alle anderen Klassen abgeleitet. Beinhaltet einen virtuellen Destruktor.
 
-\subsection {Klasse "RoomLayout"}
-Besitzt eine Liste die Zeiger auf die Klasse Room beinhaltet, einen Zeiger, der auf den vorherigen Raum zeigt und einen Wahrheitswert, der angibt ob im letzten Raum im Süden ein Durchgang war. \\
+\subsection {Klasse "AdressManager"}
+Hat zwei Listen in denen Zeiger von Adressen und Personen gespeichert werden.
+ \\
 
-\textbf {Methode "Print": } 
-Gibt die Räume die in der Liste gespeichert sind der Reihe nach aus und merkt sich immer ob im vorherigen Raum eine Durchgang im Süden war. Wenn ein Durchgang war wird der Durchgang nur einmal ausgegeben. \\
+\textbf {Methode "AddAdress": } 
+\newline
+Schnittstelle: Parameter: Adress*. Rückgabetyp: void.
+\newline 
+Fügt der Liste via pushback neue Adressen hinzu.\\
 
-\textbf {Methode "AddRoom":}
-Fügt Räume zum Raumplan hinzu. Ein Raum wird nur dann hinzugefügt wenn die südliche Seite der vorherigen Raumes mit der nördlichen Seite des Raumes, der eingefügt werden soll, übereinstimmt oder der gesamte Raumplan noch leer ist. Wenn ein Durchgang war: Im vorherigen Raum wird bei Durchgang der aktuelle Raum hinzugefügt und beim Durchgang vom aktuellen Raum wird der vorherigen Raum gespeichert.
-Weiters wird gespeichert ob der aktuelle Raum einen Durchgang im Süden hat und der Zeiger, der auf den vorherigen Raum gezeigt hat, zeigt jetzt auf den aktuellen Raum. \\
+\textbf {Methode "AddPerson": } 
+\newline
+Schnittstelle: Parameter: Person*. Rückgabetyp: void.
+\newline
+Fügt der Liste via pushback neue Personen hinzu. \\
 
-\subsection {Klasse "Room"}
-Beinhaltet einen Vektor der Zeiger auf die Klasse Side hat.\\
+\textbf {Methode "LinkAdresses": } 
+\newline
+Schnittstelle: Rückgabetyp: void.
+\newline
+ Geht die Liste mit den Personen durch und fügt sie bei der entsprechenden Adresse ein. Löscht alle Personen die keiner Adresse hinzugefügt werden können. \\
 
-\textbf {Methode "Print":} 
-Gibt den Raum aus. Durchgang wird im Norden nicht ausgegeben, wenn im letzten Raum im Süden ein Durchgang war. Die restlichen Seiten werden ganz normal ausgegeben, eine Wand im Norden oder Süden wird durch 9 Sterne gekennzeichnet, im Westen oder Osten durch 5. Ein Durchgang wird durch ein "D" gekennzeichnet. \\
+\textbf {Methode "ReadFile": } 
+\newline
+Schnittstelle: Parameter: string const\& , Reader*. Rückgabetyp: void.
+\newline
+Liest Daten mithilfe eines Readers ein.
+\\
 
-\textbf {Methode "AddSide":}
-Fügt Seiten zu einem Raum hinzu. Eine Seite wird nur dann hinzugefügt, wenn noch keine Seite für diese Himmelsrichtung existiert. Der Vektor mit den Seiten wird nach dem Einfügen nach der Definiton der Enumeration sortiert: North, West, East, South. Wenn eine Seite ein Durchgang ist, wird im Durchgang der aktuelle Raum hinzugfügt. \\
+\textbf {Methode "WriteFile": } 
+\newline
+Schnittstelle: Parameter: string const\& , Writer*. Rückgabetyp: void.
+\newline
+Gibt Daten mithilfe eines Writers aus.
+\\
 
-\subsection {Klasse "Side"} 
-Abstrakte Klasse, die eine Seite eines Raumes repräsentiert. Enthält einen Member der die "Direction" der Seite speichert und einen der angibt ob es ein Durchgang oder eine Wand ist. \\
+\textbf {Methode "ClearAdressList": } 
+\newline
+Schnittstelle: Rückgabetyp: void.
+\newline 
+Löscht die Objekte aus der Liste mit den Adressen.\\
 
-\subsection {Klasse "Wall"} 
-Repräsentiert eine Wand. Hat einen Konstruktor dem die Farbe und die Richtung der Wand übergeben werden. \\
 
-\subsection {Klasse "Door"} 
-Repräsentiert einen Durchgang. Hat einen Member der speichert ob die Tür offen oder geschlossen ist und einen Vektor der die Räume speichert, die der Durchgang verbindet. \\
+\subsection {Klasse "Adress"}
+Hat folgende Member: ZipCode, City, Street, HouseNumber, Liste mit Personen. Hat für alle eine set- und eine get-Funktion.\\
 
-\textbf {Methode "AddRoom":}
-Fügt zum Durchgang einen Raum hinzu, wenn noch nicht die maximale Anzahl der Räume die ein Durchgang verbinden kann erreicht ist.
+\textbf {Methode "AddPerson": } 
+\newline
+Schnittstelle: Parameter: Person*. Rückgabetyp: void.
+\newline
+Fügt der Liste mit den Personen eine Person hinzu.
+\\
 
-\subsection {Enumeration "Direction"}
-\begin {itemize}
-	\item North
-	\item West
-	\item East
-	\item South
-\end {itemize}
+\subsection {Klasse "Person"}
+Hat folgender Member: FirstName, LastName, Index. Getter und Setter für alle Member. \\
 
-%
-%\newpage
-%\section {Source Code}
-%
-%\lstinputlisting[language=C++]{\CodePath Object.h}
-%\newpage
-%\lstinputlisting[language=C++]{\CodePath Object.cpp}
-%
-%\newpage
-%\lstinputlisting[language=C++]{\CodePath RoomLayout.h}
-%\newpage
-%\lstinputlisting[language=C++]{\CodePath RoomLayout.cpp}
-%
-%\newpage
-%\lstinputlisting[language=C++]{\CodePath Room.h}
-%\newpage
-%\lstinputlisting[language=C++]{\CodePath Room.cpp}
-%
-%\newpage
-%\lstinputlisting[language=C++]{\CodePath Side.h}
-%\newpage
-%\lstinputlisting[language=C++]{\CodePath Side.cpp}
-%
-%\newpage
-%\lstinputlisting[language=C++]{\CodePath Wall.h}
-%\newpage
-%\lstinputlisting[language=C++]{\CodePath Wall.cpp}
-%
-%\newpage
-%\lstinputlisting[language=C++]{\CodePath Door.h}
-%\newpage
-%\lstinputlisting[language=C++]{\CodePath Door.cpp}
-%
-%\newpage
-%\lstinputlisting[language=C++]{\CodePath Direction.h}
-%
-%\newpage
-%\lstinputlisting[language=C++]{\CodePath main.cpp}
+\subsection {Klasse "Reader"}
+\textbf {Methode "Read":}
+\newline
+Schnittstelle: Parameter: string const \&, AdressManager*. Rückgabetyp: void.
+\newline
+Pure virtual function, die nur die Schnittstelle definiert und nicht implementiert ist. \\
+
+\subsection {Klasse "AdressReader" und Klasse "PersonReader"}
+Der Unterschied der beiden Klassen liegt nur darin, dass sich die Daten die eingelesen werden unterscheiden. \\
+\newline
+\textbf {Methode "Read":}
+\newline
+Schnittstelle: Parameter: string const \&, AdressManager*. Rückgabetyp: void.
+\newline
+Liest mithilfe der getline Funktion Zeile für Zeile Daten aus einer Textdatei. Der Header der Datei wird überlesen. Aus dem String den die getline Funktion liefert, werden die Daten mithilfe verschiedenster string-Funktionen (find\_first\_of, substr, erase) extrahiert. Zahlen werden mithilfe eines stringstreams in ein size\_t umgewandelt.  Die Objekte werden in dieser Funktion erzeugt und befüllt und auch gleich zum AdressManager hinzugefügt. Wir haben definiert, dass die Struktur der Daten eingehalten werden muss, wenn falsche Daten in falscher Reihenfolge in der Datei sind, dann werden irgendwelche undefinierte oder zufällige Werte gespeichert. \\
+
+\subsection {Klasse "Writer"}
+\textbf {Methode "Write":}
+\newline
+Schnittstelle: Parameter: string const \&, TAdresses const\&. Rückgabetyp: void.
+\newline
+Pure virtual function, die nur die Schnittstelle definiert und nicht implementiert ist. \\
+\newline
+\textbf {Methode "OpenFile":}
+\newline
+Schnittstelle: Parameter: string const \&, ofstream\&. Rückgabetyp: bool.
+\newline
+Gibt zurück ob die Datei geöffnet werden konnte oder nicht. \\
+
+\subsection {Klasse "HtmlWriter" und "AsciiWriter"}
+Die beiden Klassen unterscheiden sich nur in der Formatierung der Ausgabedateien. \\
+\newline
+\textbf {Methode "Write":}
+\newline
+Schnittstelle: Parameter: string const \&, TAdresses const\&. Rückgabetyp: void.
+\newline
+Schreibt Daten in eine Ascii/Html-Datei. Dabei wird die Hilfsfunktion "WriteAdresses" verwendet. Beim HtmlWriter wird die Formatierung dadurch erreicht, dass Html-Befehle in den filestream geschrieben werden.\\
+\textbf {Methode "WriteAdresses":}
+\newline
+Schreibt die Adressdaten mit der entsprechenden Formatierung in die Datei. Ruft für alle Personen die in dieser Adresse wohnen "WritePerson" auf. \\
+\textbf {Methode "WritePersons":}
+\newline
+Schreibt die Personendaten mit der entsprechenden Formatierung in die Datei. \\
+
+\newpage
+\section {Source Code}
+
+\lstinputlisting[language=C++]{\CodePath Object.h}
+\lstinputlisting[language=C++]{\CodePath Object.cpp}
+
+\newpage
+\lstinputlisting[language=C++]{\CodePath AdressManager.h}
+\newpage
+\lstinputlisting[language=C++]{\CodePath AdressManager.cpp}
+
+\newpage
+\lstinputlisting[language=C++]{\CodePath Adress.h}
+
+\newpage
+\lstinputlisting[language=C++]{\CodePath Person.h}
+
+\newpage
+\lstinputlisting[language=C++]{\CodePath Writer.h}
+\newpage
+\lstinputlisting[language=C++]{\CodePath Writer.cpp}
+
+\newpage
+\lstinputlisting[language=C++]{\CodePath HtmlWriter.h}
+\newpage
+\lstinputlisting[language=C++]{\CodePath HtmlWriter.cpp}
+
+\newpage
+\lstinputlisting[language=C++]{\CodePath AsciiWriter.h}
+\newpage
+\lstinputlisting[language=C++]{\CodePath AsciiWriter.cpp}
+
+\newpage
+\lstinputlisting[language=C++]{\CodePath Reader.h}
+
+\newpage
+\lstinputlisting[language=C++]{\CodePath PersonReader.h}
+\newpage
+\lstinputlisting[language=C++]{\CodePath PersonReader.cpp}
+
+\newpage
+\lstinputlisting[language=C++]{\CodePath AdressReader.h}
+\newpage
+\lstinputlisting[language=C++]{\CodePath AdressReader.cpp}
+
+\newpage
+\lstinputlisting[language=C++]{\CodePath main.cpp}
 
 
 \newpage
 \section {Testausgaben} 
 
 \begin {verbatim}
-Testcase0: Empty roomlayout
+Visual Leak Detector Version 2.2.3 installed.
+Testcase0: Empty adress file and person files
+Read: testcase0_person.txt ... Finished
+Read: testcase0_adress.txt ... Finished
+LinkAdresses: ... Finished
+Write: testcase0_ascii.txt ... Finished
+Write: testcase0_html.html ... Finished
 
 
-Testcase1: Roomlayout with empty rooms
-Error occured in RoomLayout::AddRoom: Room is not full
-Error occured in RoomLayout::AddRoom: Room is not full
+Testcase1: Valid adress file(single adress) and empty person files
+Read: testcase0_person.txt ... Finished
+Read: testcase1_adress.txt ... Finished
+LinkAdresses: ... Finished
+Write: testcase1_ascii.txt ... Finished
+Write: testcase1_html.html ... Finished
 
 
-Testcase2: Roomlayout with wrong rooms
-*********
-*       *
-*       D
-*       *
-****D****
+Testcase2: 
+Valid adress file(single adress) and valid person file(single person)
+
+Read: testcase2_person.txt ... Finished
+Read: testcase1_adress.txt ... Finished
+LinkAdresses: ... Finished
+Write: testcase2_ascii.txt ... Finished
+Write: testcase2_html.html ... Finished
 
 
-Testcase3: Roomlayout with correct rooms
-*********
-*       *
-*       D
-*       *
-****D****
-*       *
-*       D
-*       *
-****D****
+Testcase3: 
+Valid adress file and valid person file, multiple adresses, persons
+Read: testcase3_person.txt ... Finished
+Read: testcase3_adress.txt ... Finished
+LinkAdresses: ... Finished
+Write: testcase3_ascii.txt ... Finished
+Write: testcase3_html.html ... Finished
 
 
-Testcase4: Roomlayout with correct rooms.
-Trying to add a fifth side to one room
-Error occured in Room::AddSide: Max amount of walls already reached
-*********
-*       *
-*       D
-*       *
-*********
-*********
-*       *
-*       D
-*       *
-****D****
+Testcase4: 
+Valid adress file and valid person files, multiple adresses, persons
+Read: testcase3_person.txt ... Finished
+Read: testcase4_person.txt ... Finished
+Read: testcase3_adress.txt ... Finished
+LinkAdresses: ... Finished
+Write: testcase4_ascii.txt ... Finished
+Write: testcase4_html.html ... Finished
+
+
+Testcase5: Corrupted adress file and valid person file
+Read: testcase4_person.txt ... Finished
+Read: testcase5_adress.txt ... Finished
+LinkAdresses: ... Finished
+Write: testcase5_ascii.txt ... Finished
+Write: testcase5_html.html ... Finished
+
+
+No memory leaks detected.
+Visual Leak Detector is now exiting.
 \end {verbatim}
 
 
